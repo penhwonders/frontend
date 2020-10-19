@@ -4,6 +4,7 @@
     max-width="450"
     id="card"
     color="primary"
+    elevation="15"
   >
     <v-img
       class="white--text align-end"
@@ -14,10 +15,10 @@
     <v-card-title>{{event.title}}</v-card-title>
 
     <v-card-subtitle class="pb-0">
-      <b>Hosts</b>: {{event.hosts.join(", ")}}<br>
-      <b>Categories</b>: {{event.categories.join(", ")}}<br>
-      <b>Time</b>: {{event.time}}<br>
-      <b>Location</b>: {{event.location}}<br>
+      <b><v-icon>mdi-account-multiple</v-icon></b>: {{event.hosts.join(", ")}}<br>
+      <b><v-icon>mdi-layers</v-icon></b>: {{event.categories.join(", ")}}<br>
+      <b><v-icon>mdi-clock</v-icon></b>: {{event.time}}<br>
+      <b><v-icon>mdi-home</v-icon></b>: {{event.location}}<br>
     </v-card-subtitle>
 
     <v-card-actions class="card-actions">

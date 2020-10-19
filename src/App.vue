@@ -1,6 +1,6 @@
 <template>
   <v-app id="app"> 
-    <Navbar />  
+    <Navbar />
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -23,9 +23,6 @@ export default {
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-#app {
-  background: lightgray;
-}
 
 ::-webkit-scrollbar-track
 {
@@ -35,7 +32,7 @@ export default {
 
 ::-webkit-scrollbar
 {
-	width: 5px;
+	width: 3px;
 	background-color: #9EC5AB;
   border: none;
 }

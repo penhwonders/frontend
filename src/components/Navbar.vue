@@ -11,8 +11,11 @@
         class="primary--text"
         caption
         > 
-        Facebook Event
+        eventCup
       </v-toolbar-title>
+
+      <v-spacer></v-spacer>
+      <DatePicker />
     </v-app-bar>
 
     <!-- Drawer -->
@@ -48,7 +51,10 @@
   </nav>
 </template>
 
+
 <script>
+import DatePicker from './DatePicker'
+
 export default {
   name: "Navbar",
   data: () => ({
@@ -80,7 +86,8 @@ export default {
     toView(cate) {
       this.$router.push({name: "Category", params:{categorieName : cate}})
     }
-  }
+  },
+  components: {DatePicker}
 };
 </script>
 

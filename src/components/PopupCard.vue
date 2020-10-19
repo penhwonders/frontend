@@ -32,8 +32,8 @@
         <v-card-subtitle style="margin-top: 10px">
             <b>Hosts</b>: {{event.hosts.join(", ")}}<br>
             <b>Categories</b>: {{event.categories.join(", ")}}<br>
-            <b>Location</b>: {{event.location}}<br>
             <b>Time</b>: {{event.time}}<br>
+            <b>Location</b>: {{event.location}}<br>
             <b>Description:</b>
         </v-card-subtitle>
         
@@ -52,7 +52,7 @@
             <v-spacer></v-spacer>
             <v-btn
                 color="background"
-                style="font-weight: 800"
+                style="font-weight: 600"
                 text
                 @click="dialog = false"
             >
