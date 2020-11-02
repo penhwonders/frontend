@@ -1,35 +1,59 @@
 <template>
-  <nav>
+  <v-card>
     <!-- Navbar -->
-    <v-app-bar color="background" app fixed>
+    <v-app-bar
+      min-width="150px"
+      color="background"
+      app
+      fixed
+      :collapse="!collapseOnScroll"
+      :collapse-on-scroll="collapseOnScroll"
+    >
       <v-app-bar-nav-icon
         class="primary--text"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
 
-      <v-toolbar-title 
-        class="primary--text"
-        caption
-        > 
-        eventCup
+      <v-toolbar-title class="primary--text" caption>
+        Jol Leng
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <DatePicker />
+      <v-checkbox
+        v-model="collapseOnScroll"
+        color="white"
+        hide-details
+      ></v-checkbox>
+      <v-checkbox
+        v-model="collapseOnScroll"
+        color="white"
+        hide-details
+      ></v-checkbox>
+      <v-checkbox
+        v-model="collapseOnScroll"
+        color="white"
+        hide-details
+      ></v-checkbox>
     </v-app-bar>
 
     <!-- Drawer -->
-    <v-navigation-drawer 
-      v-model="drawer" 
-      color="background" 
-      app 
-    >
+    <v-navigation-drawer v-model="drawer" color="background" app>
       <v-list>
         <!-- Home button -->
-        <v-list-item><v-btn to="/" width="100%" color="primary" text>Home</v-btn></v-list-item>
+        <v-list-item
+          ><v-btn to="/" width="100%" color="primary" text
+            >Home</v-btn
+          ></v-list-item
+        >
         <!-- Category button -->
         <v-list-item>
-          <v-btn width="100%" color="primary" text @click="categoryToggle = !categoryToggle">Category</v-btn>
+          <v-btn
+            width="100%"
+            color="primary"
+            text
+            @click="categoryToggle = !categoryToggle"
+            >Category</v-btn
+          >
         </v-list-item>
         <!-- Category items list -->
         <v-expand-transition>
@@ -39,58 +63,84 @@
               v-for="cate in category"
               v-bind:key="category.indexOf(cate)"
             >
-              <v-btn @click="toView(cate)" width="100%" color="secondary" text>{{cate}} <v-spacer></v-spacer></v-btn>
+              <v-btn @click="toView(cate)" width="100%" color="secondary" text
+                >{{ cate }} <v-spacer></v-spacer
+              ></v-btn>
             </v-list-item>
           </div>
         </v-expand-transition>
         <!-- About button -->
-        <v-list-item><v-btn to="/About"  width="100%" color="primary " text>About</v-btn></v-list-item>
+        <v-list-item
+          ><v-btn to="/About" width="100%" color="primary " text
+            >About</v-btn
+          ></v-list-item
+        >
+        <v-list-item>
+          <v-switch
+            dark
+            v-model="$vuetify.theme.dark"
+            hint="My eyes are blinded! Please help!"
+            label="Dark Mode"
+            persistent-hint
+            @click="saveThemeToLocal"
+          ></v-switch>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
-  </nav>
+  </v-card>
 </template>
 
 
 <script>
-import DatePicker from './DatePicker'
-
 export default {
   name: "Navbar",
   data: () => ({
     drawer: false,
     categoryToggle: false,
+    collapseOnScroll: true,
     category: [
       "Art",
-      "Cooking",
+      "Causes",
+      "Comedy",
+      "Crafts",
       "Dances",
       "Drinks",
       "Education",
       "Entertainment",
+      "Film",
       "Fitness",
       "Food",
-      "Kids friendly",
-      "Live music",
+      "Games",
+      "Health",
+      "Home",
+      "Literature",
+      "Music",
+      "Networking",
       "Party",
-      "Running",
-      "Sport",
-      "Yoga",
+      "Religion",
+      "Shopping",
+      "Sports",
+      "Theatre",
+      "Wellness",
+      "Other",
     ],
   }),
   watch: {
     drawer() {
       this.categoryToggle = false;
-    }
+    },
   },
   methods: {
     toView(cate) {
-      this.$router.push({name: "Category", params:{categorieName : cate}})
-    }
+      this.$router.push({ name: "Category", params: { categorieName: cate } });
+    },
+    saveThemeToLocal() {
+      localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+    },
   },
-  components: {DatePicker}
+  components: {},
 };
 </script>
 
 <style scoped>
-  
 </style>

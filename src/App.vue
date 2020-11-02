@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app"> 
+  <v-app id="app">
     <Navbar />
     <v-main>
       <router-view></router-view>
@@ -8,38 +8,37 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-      categorySelect: '',
-    }
+      categorySelect: "",
+    };
   },
-  components : { Navbar },
+  components: { Navbar },
 };
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-::-webkit-scrollbar-track
-{
-	background-color: #011502;
+/* body {
+  overflow-x: hidden;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+::-webkit-scrollbar-track {
+  background-color: #262e38;
   border: none;
 }
 
-::-webkit-scrollbar
-{
-	width: 3px;
-	background-color: #9EC5AB;
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #63c6ff;
   border: none;
 }
 
-::-webkit-scrollbar-thumb
-{
-	background-color: #9EC5AB;
+::-webkit-scrollbar-thumb {
+  background-color: #63c6ff;
   border: none;
 }
 </style>

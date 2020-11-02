@@ -1,9 +1,9 @@
 <template>
   <v-card
     class="mx-2 mb-3 card-outter"
-    max-width="450"
+    max-width="450px"
     id="card"
-    color="primary"
+    color="bg"
     elevation="15"
   >
     <v-img
@@ -12,33 +12,33 @@
       v-bind:src="event.image"
     ></v-img>
 
-    <v-card-title>{{event.title}}</v-card-title>
+    <v-card-title>{{ event.title }}</v-card-title>
 
     <v-card-subtitle class="pb-0">
-      <b><v-icon>mdi-account-multiple</v-icon></b>: {{event.hosts.join(", ")}}<br>
-      <b><v-icon>mdi-layers</v-icon></b>: {{event.categories.join(", ")}}<br>
-      <b><v-icon>mdi-clock</v-icon></b>: {{event.time}}<br>
-      <b><v-icon>mdi-home</v-icon></b>: {{event.location}}<br>
+      <b><v-icon>mdi-account-multiple</v-icon></b> {{ event.hosts.join(", ")
+      }}<br />
+      <b><v-icon>mdi-clock</v-icon></b> {{ event.time }}<br />
+      <b><v-icon>mdi-map-marker</v-icon></b> {{ event.location }}<br />
+      <b><v-icon>mdi-layers</v-icon></b> {{ event.categories.join(", ") }}<br />
     </v-card-subtitle>
 
     <v-card-actions class="card-actions">
       <v-spacer></v-spacer>
-      <PopupCard :event="event"/>
+      <PopupCard :event="event" />
     </v-card-actions>
-    
   </v-card>
 </template>
 
 <script>
-import PopupCard from './PopupCard'
+import PopupCard from "./PopupCard";
 
 export default {
-    name: 'Card',
-    props: {
-      event: Object,
-    },
-    components: {PopupCard}
-}
+  name: "Card",
+  props: {
+    event: Object,
+  },
+  components: { PopupCard },
+};
 </script>
 
 <style scoped>
