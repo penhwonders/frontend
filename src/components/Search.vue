@@ -6,6 +6,8 @@
     single-line
     hide-details
     @input="filterEventsBySearch"
+    clearable
+    hint="Search by title, description, location"
   ></v-text-field>
 </template>
 

@@ -19,21 +19,27 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <v-checkbox
-        v-model="collapseOnScroll"
-        color="white"
-        hide-details
-      ></v-checkbox>
-      <v-checkbox
-        v-model="collapseOnScroll"
-        color="white"
-        hide-details
-      ></v-checkbox>
-      <v-checkbox
-        v-model="collapseOnScroll"
-        color="white"
-        hide-details
-      ></v-checkbox>
+      <v-btn
+        v-if="$store.state.searchType != 'search'"
+        icon
+        @click="searchType('search')"
+      >
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+      <v-btn
+        v-if="$store.state.searchType != 'calendar'"
+        icon
+        @click="searchType('calendar')"
+      >
+        <v-icon>mdi-calendar</v-icon>
+      </v-btn>
+      <v-btn
+        v-if="$store.state.searchType != 'category'"
+        icon
+        @click="searchType('category')"
+      >
+        <v-icon>mdi-layers</v-icon>
+      </v-btn>
     </v-app-bar>
 
     <!-- Drawer -->
@@ -125,6 +131,11 @@ export default {
       "Other",
     ],
   }),
+  computed: {
+    // searchType() {
+    //   return this.searchType;
+    // },
+  },
   watch: {
     drawer() {
       this.categoryToggle = false;
@@ -136,6 +147,9 @@ export default {
     },
     saveThemeToLocal() {
       localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
+    },
+    searchType(type) {
+      this.$store.dispatch("updateSearchType", type);
     },
   },
   components: {},

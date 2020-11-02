@@ -1,18 +1,20 @@
 <template>
-  <v-container style="max-width: 95%">
+  <v-container>
+    <Search
+      ml-5
+      v-if="$store.state.searchType == 'search'"
+      v-on:SearchToHome="(searchData) => (search = searchData)"
+    />
+
+    <DatePicker
+      v-if="$store.state.searchType == 'calendar'"
+      v-on:DateToHome="(dates) => (selectedDates = dates)"
+    />
+    <SelectCategory
+      v-if="$store.state.searchType == 'category'"
+      v-on:CategoryToHome="(categories) => (selectedCategories = categories)"
+    />
     <v-layout row wrap justify-start>
-      <v-flex xs12 sm6 md4 lg4 xl4>
-        <Search v-on:SearchToHome="(searchData) => (search = searchData)"
-      /></v-flex>
-      <v-flex xs12 sm6 md4 lg4 xl4
-        ><DatePicker v-on:DateToHome="(dates) => (selectedDates = dates)"
-      /></v-flex>
-      <v-flex xs12 sm6 md4 lg4 xl4
-        ><SelectCategory
-          v-on:CategoryToHome="
-            (categories) => (selectedCategories = categories)
-          "
-      /></v-flex>
       <v-flex
         xs12
         sm6

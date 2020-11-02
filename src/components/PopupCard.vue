@@ -2,7 +2,6 @@
   <v-dialog
     v-model="dialog"
     scrollable
-    :persistent="$vuetify.breakpoint.mobile"
     :overlay="false"
     max-width="600px"
     transition="dialog-transition"
