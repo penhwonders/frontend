@@ -13,13 +13,6 @@
 export default {
   data: () => ({
     search: "",
-    date: null,
-    trip: {
-      name: "",
-      location: null,
-      start: null,
-      end: null,
-    },
   }),
   methods: {
     filterEventsBySearch() {
