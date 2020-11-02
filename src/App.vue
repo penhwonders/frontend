@@ -22,9 +22,6 @@ export default {
 </script>
 
 <style>
-/* body {
-  overflow-x: hidden;
-} */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 ::-webkit-scrollbar-track {
   background-color: #262e38;

@@ -47,8 +47,11 @@ export default {
   computed: {
     filteredEvents() {
       if (this.search) {
-        return this.ConstantEvents.filter((e) =>
-          e.title.toLowerCase().includes(this.search.toLowerCase())
+        return this.ConstantEvents.filter(
+          (e) =>
+            e.title.toLowerCase().includes(this.search.toLowerCase()) ||
+            e.location.toLowerCase().includes(this.search.toLowerCase()) ||
+            e.description.toLowerCase().includes(this.search.toLowerCase())
         );
       } else if (this.selectedCategories.length) {
         return this.ConstantEvents.filter((e) =>

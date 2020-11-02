@@ -131,11 +131,6 @@ export default {
       "Other",
     ],
   }),
-  computed: {
-    // searchType() {
-    //   return this.searchType;
-    // },
-  },
   watch: {
     drawer() {
       this.categoryToggle = false;
@@ -150,6 +145,15 @@ export default {
     },
     searchType(type) {
       this.$store.dispatch("updateSearchType", type);
+      if (this.$router.name != "Home") {
+        this.$router.push({ name: "Home" });
+      } else {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
     },
   },
   components: {},

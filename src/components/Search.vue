@@ -3,11 +3,10 @@
     v-model="search"
     append-icon="mdi-magnify"
     label="Search"
-    single-line
-    hide-details
     @input="filterEventsBySearch"
     clearable
-    hint="Search by title, description, location"
+    outlined
+    hint="Search by Title, Description, Location"
   ></v-text-field>
 </template>
 
