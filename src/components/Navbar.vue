@@ -20,6 +20,7 @@
 
       <v-spacer></v-spacer>
       <v-btn
+        dark
         v-if="$store.state.searchType != 'search'"
         icon
         @click="searchType('search')"
@@ -27,6 +28,7 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
       <v-btn
+        dark
         v-if="$store.state.searchType != 'calendar'"
         icon
         @click="searchType('calendar')"
@@ -34,6 +36,7 @@
         <v-icon>mdi-calendar</v-icon>
       </v-btn>
       <v-btn
+        dark
         v-if="$store.state.searchType != 'category'"
         icon
         @click="searchType('category')"
@@ -51,30 +54,6 @@
             >Home</v-btn
           ></v-list-item
         >
-        <!-- Category button -->
-        <v-list-item>
-          <v-btn
-            width="100%"
-            color="primary"
-            text
-            @click="categoryToggle = !categoryToggle"
-            >Category</v-btn
-          >
-        </v-list-item>
-        <!-- Category items list -->
-        <v-expand-transition>
-          <div v-if="categoryToggle">
-            <v-list-item
-              class="category"
-              v-for="cate in category"
-              v-bind:key="category.indexOf(cate)"
-            >
-              <v-btn @click="toView(cate)" width="100%" color="secondary" text
-                >{{ cate }} <v-spacer></v-spacer
-              ></v-btn>
-            </v-list-item>
-          </div>
-        </v-expand-transition>
         <!-- About button -->
         <v-list-item
           ><v-btn to="/About" width="100%" color="primary " text
@@ -85,7 +64,6 @@
           <v-switch
             dark
             v-model="$vuetify.theme.dark"
-            hint="My eyes are blinded! Please help!"
             label="Dark Mode"
             persistent-hint
             @click="saveThemeToLocal"
@@ -102,34 +80,7 @@ export default {
   name: "Navbar",
   data: () => ({
     drawer: false,
-    categoryToggle: false,
     collapseOnScroll: true,
-    category: [
-      "Art",
-      "Causes",
-      "Comedy",
-      "Crafts",
-      "Dances",
-      "Drinks",
-      "Education",
-      "Entertainment",
-      "Film",
-      "Fitness",
-      "Food",
-      "Games",
-      "Health",
-      "Home",
-      "Literature",
-      "Music",
-      "Networking",
-      "Party",
-      "Religion",
-      "Shopping",
-      "Sports",
-      "Theatre",
-      "Wellness",
-      "Other",
-    ],
   }),
   watch: {
     drawer() {
@@ -137,15 +88,12 @@ export default {
     },
   },
   methods: {
-    toView(cate) {
-      this.$router.push({ name: "Category", params: { categorieName: cate } });
-    },
     saveThemeToLocal() {
       localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
     },
     searchType(type) {
       this.$store.dispatch("updateSearchType", type);
-      if (this.$router.name != "Home") {
+      if (this.$router.currentRoute.name != "Home") {
         this.$router.push({ name: "Home" });
       } else {
         window.scrollTo({
