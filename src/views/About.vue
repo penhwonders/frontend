@@ -1,5 +1,5 @@
 <template>
-  <v-main class="text-center">
+  <v-main class="text-center" style="padding: 10px; padding-top: 50px">
     <p class="text-h3">eventCup</p>
     <br />
     <p class="text-body-1 mx-5">

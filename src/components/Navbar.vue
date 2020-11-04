@@ -3,6 +3,7 @@
     <!-- Navbar -->
     <v-app-bar
       min-width="150px"
+      style="border-radius: 0px 0px 5px 0px;"
       color="background"
       app
       fixed
@@ -12,7 +13,17 @@
       <v-app-bar-nav-icon
         class="primary--text"
         @click="drawer = !drawer"
-      ></v-app-bar-nav-icon>
+        v-if="navbarIcon() == true"
+      >
+        <v-icon>mdi-menu</v-icon>
+      </v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        class="primary--text"
+        @click="drawer = !drawer"
+        v-if="navbarIcon() == false"
+      >
+        <v-icon>mdi-arrow-left</v-icon>
+      </v-app-bar-nav-icon>
 
       <v-toolbar-title class="primary--text" caption>
         Jol Leng
@@ -60,7 +71,17 @@
             >About</v-btn
           ></v-list-item
         >
-        <v-list-item>
+        <v-list-item
+          ><v-btn to="/AddUpdateEvent" width="100%" color="primary " text
+            >Add/Update new event</v-btn
+          ></v-list-item
+        >
+        <v-list-item
+          ><v-btn to="/Feedback" width="100%" color="primary " text
+            >Feedback</v-btn
+          ></v-list-item
+        >
+        <v-list-item style="margin: auto 0;">
           <v-switch
             dark
             v-model="$vuetify.theme.dark"
@@ -88,6 +109,14 @@ export default {
     },
   },
   methods: {
+    navbarIcon() {
+      if(this.drawer == false){
+        return true
+      }
+      else {
+        return false
+      }
+    },
     saveThemeToLocal() {
       localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());
     },

@@ -29,7 +29,7 @@ export default {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
   background-color: #63c6ff;
   border: none;
 }
