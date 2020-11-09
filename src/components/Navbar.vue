@@ -3,7 +3,7 @@
     <!-- Navbar -->
     <v-app-bar
       min-width="150px"
-      style="border-radius: 0px 0px 5px 0px;"
+      style="border-radius: 0px 0px 15px 0px;"
       color="background"
       app
       fixed
@@ -81,14 +81,17 @@
             >Feedback</v-btn
           ></v-list-item
         >
-        <v-list-item style="margin: auto 0;">
+        <v-list-item>
+          <v-spacer></v-spacer>
           <v-switch
+            inset
             dark
             v-model="$vuetify.theme.dark"
             label="Dark Mode"
             persistent-hint
             @click="saveThemeToLocal"
           ></v-switch>
+          <v-spacer></v-spacer>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>

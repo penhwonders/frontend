@@ -10,8 +10,6 @@
     </p>
     <br>
     <p class="text-h6">Our team</p>
-
-    
   </v-main>
 </template>
 
