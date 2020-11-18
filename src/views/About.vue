@@ -1,14 +1,16 @@
 <template>
   <v-main class="text-center" style="padding: 10px; padding-top: 50px">
-    <p class="text-h3">eventCup</p>
+    <p class="text-h3">Penhwonders</p>
     <br />
     <p class="text-body-1 mx-5">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, excepturi
-      voluptatum. Corrupti at minima, sed explicabo odit exercitationem
-      assumenda impedit sapiente est, consectetur ducimus ab voluptatum aliquid
-      omnis. Ipsa, deleniti?
+      Welcome to a renovation of Penhwonders! <br />
+      A web application + Automation built by Cambodian college students to help
+      your life easier in finding and promoting wonderful events in this amazing
+      capital city of Cambodia, Phnom Penh! The events are automatically updated
+      from a list of registered facebook pages once everyday at 12:30am by our
+      automated web scraping system.
     </p>
-    <br>
+    <br />
     <p class="text-h6">Our team</p>
   </v-main>
 </template>
@@ -18,12 +20,12 @@ export default {
   name: "About",
   data() {
     return {
-      teams : {
+      teams: {
         oudom: {
-          "name" : "Munyoudoum Pav",
-          "img" : "../"
-        }
-      }
+          name: "Munyoudoum Pav",
+          img: "../",
+        },
+      },
     };
   },
 };
