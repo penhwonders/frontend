@@ -64,7 +64,12 @@ export default {
   name: "About",
   data() {
     return {
-     //
+      teams: {
+        oudom: {
+          name: "Munyoudoum Pav",
+          img: "../",
+        },
+      },
     };
   },
 };
@@ -76,6 +81,6 @@ export default {
     margin: 6px;
   }
   .icon:hover {
-    color: #96d7ff;
+    color: #63c6ff;
   }
 </style>
