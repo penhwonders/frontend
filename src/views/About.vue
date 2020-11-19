@@ -47,7 +47,7 @@
             <v-spacer></v-spacer>
             <a class="socialUrl" href="https://www.instagram.com/munyoudoum/" target="_blank"><v-icon size="30" class="icon">mdi-instagram</v-icon></a>
             <v-spacer></v-spacer>
-            <a class="socialUrl" href="https://web.facebook.com/munyoudoum" target="_blank"><v-icon size="30" class="icon">mdi-facebook</v-icon></a>
+            <a class="socialUrl" href="https://facebook.com/munyoudoum" target="_blank"><v-icon size="30" class="icon">mdi-facebook</v-icon></a>
             <v-spacer></v-spacer>
             <a class="socialUrl" href="https://github.com/munyoudoum" target="_blank"><v-icon size="30" class="icon">mdi-github</v-icon></a>
             <v-spacer></v-spacer>
@@ -64,12 +64,7 @@ export default {
   name: "About",
   data() {
     return {
-      teams: {
-        oudom: {
-          name: "Munyoudoum Pav",
-          img: "../",
-        },
-      },
+
     };
   },
 };

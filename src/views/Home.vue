@@ -1,7 +1,6 @@
 <template>
   <v-container>
     <Search
-      ml-5
       v-if="$store.state.searchType == 'search'"
       v-on:SearchToHome="(searchData) => (search = searchData)"
     />

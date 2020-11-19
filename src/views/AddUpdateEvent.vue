@@ -1,6 +1,6 @@
 <template>
   <v-main class="text-center" style="padding: 10px; padding-top: 50px">
-    <p class="title">Add and Update new event</p>
+    <p class="title">Add/Update new events</p>
     <v-container>
       <v-form v-model="valid">
         <v-text-field
