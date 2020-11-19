@@ -7,16 +7,15 @@
     elevation="15"
   >
     <v-img
+      id="image"
       class="white--text align-end"
-      height="auto"
       v-bind:src="event.image"
     ></v-img>
 
-    <v-card-title>{{ event.title }}</v-card-title>
+    <v-card-title>{{ event.title.length >= 23 ? event.title.slice(0, 23) + '...' : event.title }}</v-card-title>
 
     <v-card-subtitle class="pb-0">
-      <b><v-icon>mdi-account-multiple</v-icon></b> {{ event.hosts.join(", ")
-      }}<br />
+      <b><v-icon>mdi-account-multiple</v-icon></b> {{ event.hosts.length > 2 ? event.hosts.slice(0, 2).join(", ") + ', ...' : event.hosts.join(", ") }}<br />
       <b><v-icon>mdi-clock</v-icon></b> {{ event.time }}<br />
       <b><v-icon>mdi-map-marker</v-icon></b> {{ event.location }}<br />
       <b><v-icon>mdi-layers</v-icon></b> {{ event.categories.join(", ") }}<br />
@@ -59,6 +58,11 @@ export default {
 @media only screen and (max-width: 600px) {
   #card {
     height: auto;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #image {
+    height: 200px;
   }
 }
 </style>

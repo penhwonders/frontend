@@ -23,14 +23,15 @@
           align-center
         ></v-img>
         <br />
-        Hosts: <b>{{ event.hosts.join(", ") }}</b
-        ><br />
-        Time<b>: {{ event.time }}</b
-        ><br />
-        Location<b>: {{ event.location }}</b
-        ><br />
-        Categories<b>: {{ event.categories.join(", ") }}</b
-        ><br />
+        Hosts: <b>{{ event.hosts.join(", ") }}</b>
+        <br />
+        Time<b>: {{ event.time }}</b>
+        <br />
+        Location<b>: {{ event.location }}</b>
+        <br />
+        <br />
+        Categories<b>: {{ event.categories.join(", ") }}</b>
+        <br />
         Description:<br />
         {{ event.description }}
         <iframe

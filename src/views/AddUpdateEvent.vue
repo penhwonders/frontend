@@ -55,7 +55,7 @@ export default {
       value: null,
       items: ["Add", "Update"],
       Alert: false,
-      event: null
+      event: null,
     };
   },
   methods: {
@@ -63,8 +63,11 @@ export default {
       await Axios.post(apiUrl, {
         "link" : this.link
       })
-        .then(event => console.log(event))
-        .catch(err => console.log(err))
+        .then((event) => {
+          this.event = event.data.body
+          console.log(this.event);
+        })
+        .catch((err) => console.log(err.data))
     },
     update() {
       console.log(this.link);

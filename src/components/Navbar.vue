@@ -65,20 +65,22 @@
             >Home</v-btn
           ></v-list-item
         >
-        <!-- About button -->
-        <v-list-item
-          ><v-btn to="/About" width="100%" color="primary " text
-            >About</v-btn
-          ></v-list-item
-        >
+        <!-- Add and Update event button -->
         <v-list-item
           ><v-btn to="/AddUpdateEvent" width="100%" color="primary " text
             >Add/Update new event</v-btn
           ></v-list-item
         >
+        <!-- Feedback button -->
         <v-list-item
           ><v-btn to="/Feedback" width="100%" color="primary " text
             >Feedback</v-btn
+          ></v-list-item
+        >
+        <!-- About button -->
+        <v-list-item
+          ><v-btn to="/About" width="100%" color="primary " text
+            >About</v-btn
           ></v-list-item
         >
         <v-list-item>

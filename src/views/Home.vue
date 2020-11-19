@@ -14,7 +14,7 @@
       v-if="$store.state.searchType == 'category'"
       v-on:CategoryToHome="(categories) => (selectedCategories = categories)"
     />
-    <v-layout row wrap justify-start>
+    <v-layout row wrap justify-start v-if="ConstantEvents.length !== 0">
       <v-flex
         xs12
         sm6
@@ -25,6 +25,23 @@
         :key="event.id"
       >
         <Card :event="event" />
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap justify-start v-else>
+      <v-flex
+        xs12
+        sm6
+        md4
+        lg3
+        xl3
+        v-for="n in 8"
+        :key="n"
+      >
+        <v-skeleton-loader
+          class="mx-2 mb-3 card-outter"
+          max-width="450px"
+          type="card"
+        ></v-skeleton-loader>
       </v-flex>
     </v-layout>
   </v-container>
@@ -82,7 +99,7 @@ export default {
       .get("https://uexxkpj143.execute-api.ap-southeast-1.amazonaws.com/dev")
       .then((response) => (this.ConstantEvents = response.data))
       .catch((error) => console.log(error));
-    this.events = this.ConstantEvents;
+    // this.events = this.ConstantEvents;
   },
   components: { Card, DatePicker, SelectCategory, Search },
 };
