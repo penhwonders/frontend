@@ -12,7 +12,7 @@
       v-bind:src="event.image"
     ></v-img>
 
-    <v-card-title>{{ event.title.length >= 50 ? event.title.slice(0, 50) + '...' : event.title }}</v-card-title>
+    <v-card-title>{{ event.title.length >= 46 ? event.title.slice(0, 46) + '...' : event.title }}</v-card-title>
 
     <v-card-subtitle class="pb-0">
       <b><v-icon>mdi-account-multiple</v-icon></b> {{ event.hosts.length > 2 ? event.hosts.slice(0, 2).join(", ") + ', ...' : event.hosts.join(", ") }}<br />
