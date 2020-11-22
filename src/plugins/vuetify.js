@@ -8,7 +8,6 @@ const colorPallete = {
   secondary: "#358ff0",
   bg: "#262e38",
   success: "#104F55",
-  accent: "#01200F",
 };
 
 export default new Vuetify({
