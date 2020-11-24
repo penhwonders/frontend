@@ -6,11 +6,7 @@
     color="bg"
     elevation="15"
   >
-    <v-img
-      id="image"
-      class="white--text align-end"
-      v-bind:src="event.image"
-    ></v-img>
+    <v-img id="image" v-bind:src="event.image"></v-img>
 
     <v-card-title>{{
       event.title.length >= 46 ? event.title.slice(0, 46) + "..." : event.title

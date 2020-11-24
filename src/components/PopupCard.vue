@@ -53,14 +53,7 @@
           Open in Facebook
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn
-          color="background"
-          style="font-weight: 600"
-          text
-          @click="dialog = false"
-        >
-          Close
-        </v-btn>
+        <v-btn color="background" text @click="dialog = false"> Close </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

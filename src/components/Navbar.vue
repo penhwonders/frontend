@@ -20,7 +20,7 @@
       <v-app-bar-nav-icon
         class="primary--text"
         @click="drawer = !drawer"
-        v-if="navbarIcon() == false"
+        v-else
       >
         <v-icon>mdi-arrow-left</v-icon>
       </v-app-bar-nav-icon>
