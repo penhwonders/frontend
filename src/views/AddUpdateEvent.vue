@@ -8,12 +8,7 @@
           type="text"
           autocomplete="off"
           hint="Ex: https://www.facebook.com/events/702694946989244/"
-          :rules="[
-            (v) => !!v || 'Link is required',
-            (v) =>
-              /^https:\/\/www\.facebook\.com\/events\/\d{10,20}\/$/.test(v) ||
-              'Link is invalid',
-          ]"
+          :rules="linkRules"
           persistent-hint
           outlined
           label="Facebook event link"
@@ -37,10 +32,8 @@
       </v-form>
       <AlertNotification
         v-if="Alert"
-        :isFeedback="false"
-        :title="
-          value === 'Add' && value !== null ? 'Event Added!' : 'Event Updated!'
-        "
+        :data="event"
+        :isNewEvent="isNewEvent"
       />
     </v-container>
   </v-main>
@@ -64,6 +57,13 @@ export default {
       items: ["Add", "Update"],
       Alert: false,
       event: null,
+      isNewEvent: false,
+      linkRules: [
+                    (v) => !!v || 'Link is required',
+                    (v) =>
+                      /^https:\/\/www|web\.facebook\.com\/events\/\d{10,20}|\/$/.test(v) ||
+                      'Link is invalid',
+                  ]
     };
   },
   methods: {
@@ -71,8 +71,20 @@ export default {
       await Axios.post(apiUrl, {
         link: this.link,
       })
-        .then((event) => console.log(event.data))
-        .catch((err) => console.log(err.data));
+        .then((event) => this.eventAlert(event.data))
+        .catch(function (error) {
+          if (error.response) {
+            // Request made and server responded
+            console.log(error.response.data);
+            console.log(error.response.status);
+          } else if (error.request) {
+            // The request was made but no response was received
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+          }
+        });
     },
     async update() {
       await Axios.put(apiUrl, {
@@ -92,6 +104,18 @@ export default {
             console.log("Error", error.message);
           }
         });
+    },
+    eventAlert(event) {
+      if(typeof event.body === Object){
+        this.isNewEvent = true
+      }
+      else if(typeof event.body === String){
+        this.isNewEvent = false
+      }
+      console.log(event.body)
+      console.log(this.isNewEvent);
+      this.event = event
+      this.Alert = true
     },
   },
   components: { AlertNotification },

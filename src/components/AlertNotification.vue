@@ -8,17 +8,30 @@
       transition="dialog-transition"
   >
       <v-card v-if="dialog">
-          <v-card-title caption style="padding: 25px">
-            {{title}}
-          </v-card-title>
-          <v-divider></v-divider>
-          <v-card-actions>
-              <v-spacer></v-spacer>
-              <PopupCard v-if="!isFeedback"/>
-              <v-spacer v-if="!isFeedback"></v-spacer>
-              <v-btn color="background primary--text" @click="dialog = false">Close</v-btn>
-              <v-spacer></v-spacer>
-          </v-card-actions>
+          <v-card v-if="isNewEvent === true">
+            <v-card-title caption style="padding: 25px">
+                Event added
+            </v-card-title>
+            <v-divider></v-divider>
+            <v-card-actions>
+                <v-spacer></v-spacer>
+                <PopupCard :event="data"/>
+                <v-spacer></v-spacer>
+                <v-btn color="background primary--text" @click="dialog = false">Close</v-btn>
+                <v-spacer></v-spacer>
+            </v-card-actions>
+          </v-card>
+          <v-card v-else>
+            <v-card-title caption style="padding: 25px">
+                {{data.body}}
+            </v-card-title>
+            <v-divider></v-divider>
+            <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="background primary--text" @click="dialog = false">Close</v-btn>
+                <v-spacer></v-spacer>
+            </v-card-actions>
+          </v-card>
       </v-card>
   </v-dialog>
 </template>
@@ -29,8 +42,8 @@ import PopupCard from './PopupCard'
 export default {
     name: 'AlertNotification',
     props: {
-        'isFeedback': Boolean,
-        'title': String
+        'data': Object,
+        'isNewEvent': Boolean
     },
     data() {
         return {

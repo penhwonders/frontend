@@ -4,14 +4,28 @@
       <v-container>
         <v-form>
           <v-text-field
-            v-model="name"
+            v-model="username"
+            type="text"
+            name="username"
+            label="Name"
+            :rules="[(v) => !!v || 'Please fill in your name']"
+            id="username"
+            outlined
+            autocomplete="off"
+          ></v-text-field>
+          <v-text-field
+            v-model="topic"
+            type="text"
             label="Topic"
+            name="topic"
             :rules="[(v) => !!v || 'Please fill in topic']"
-            id="id"
+            id="topic"
             outlined
             autocomplete="off"
           ></v-text-field>
           <v-textarea
+            name="feedbackText"
+            id="feedbackText"
             type="text"
             v-model="feedbackText"
             outlined
@@ -20,7 +34,7 @@
             autocomplete="off"
           ></v-textarea>
           <v-btn
-            :disabled="feedbackText === '' || name === '' ? true : false"
+            :disabled="feedbackText === '' || name === '' ? true : false || username === ''"
             large
             color="background primary--text"
             elevation="5"
@@ -43,7 +57,8 @@ export default {
   data() {
     return {
       feedbackText: "",
-      name: "",
+      topic: "",
+      username: "",
       Alert: false
     }
   },
