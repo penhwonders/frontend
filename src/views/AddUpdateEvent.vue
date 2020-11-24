@@ -1,5 +1,5 @@
 <template>
-  <v-main class="text-center" style="padding: 10px; padding-top: 50px">
+  <v-main class="text-center" style="padding: 10px">
     <p class="title">Add/Update new events</p>
     <v-container>
       <v-form v-model="valid">
