@@ -26,19 +26,22 @@
         <br />
         Description:<br />
         {{ event.description }}
-        <iframe
-          v-if="event.location != 'Online Event'"
-          width="100%"
-          height="280px"
-          frameborder="0"
-          class="mt-2 rounded"
-          v-bind:src="
-            'https://www.google.com/maps/embed/v1/place?key=AIzaSyCQMbSQjawwUF2loVgW5NX5HpDp8069-HU&q=' +
-            event.location
-          "
-          allowfullscreen
-        >
-        </iframe>
+        <div v-if="event.location != 'Online event' && event.location != ''">
+          <iframe
+            width="100%"
+            height="280px"
+            frameborder="0"
+            class="mt-2 rounded"
+            v-bind:src="
+              'https://www.google.com/maps/embed/v1/place?key=AIzaSyCQMbSQjawwUF2loVgW5NX5HpDp8069-HU&q=' +
+              event.location
+            "
+            allowfullscreen
+          >
+          </iframe>
+          <br />
+          <b>Note: Google Maps location here is not always correct </b>
+        </div>
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions>

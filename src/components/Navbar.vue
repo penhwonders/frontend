@@ -3,7 +3,7 @@
     <!-- Navbar -->
     <v-app-bar
       min-width="150px"
-      style="border-radius: 0px 0px 15px 0px;"
+      class="rounded-tl-0"
       color="background"
       app
       fixed
@@ -115,11 +115,10 @@ export default {
   },
   methods: {
     navbarIcon() {
-      if(this.drawer == false){
-        return true
-      }
-      else {
-        return false
+      if (this.drawer == false) {
+        return true;
+      } else {
+        return false;
       }
     },
     saveThemeToLocal() {
