@@ -1,7 +1,6 @@
 <template>
   <v-container>
     <Search
-      ml-5
       v-if="$store.state.searchType == 'search'"
       v-on:SearchToHome="(searchData) => (search = searchData)"
     />
@@ -40,7 +39,7 @@
         <v-skeleton-loader
           class="mx-2 mb-3 card-outter"
           max-width="450px"
-          type="card"
+          type="card, article, actions"
         ></v-skeleton-loader>
       </v-flex>
     </v-layout>

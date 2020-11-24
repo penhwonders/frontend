@@ -14,21 +14,13 @@
         {{ event.title }}
       </v-card-title>
       <v-card-text style="white-space: pre-line">
-        <v-img
-          width="100%"
-          style="margin: auto 0;"
-          class="img-style"
-          v-bind:src="event.image"
-          justify-center
-          align-center
-        ></v-img>
+        <v-img width="100%" class="rounded" v-bind:src="event.image"></v-img>
         <br />
         Hosts: <b>{{ event.hosts.join(", ") }}</b>
         <br />
         Time<b>: {{ event.time }}</b>
         <br />
         Location<b>: {{ event.location }}</b>
-        <br />
         <br />
         Categories<b>: {{ event.categories.join(", ") }}</b>
         <br />
@@ -39,7 +31,7 @@
           width="100%"
           height="280px"
           frameborder="0"
-          style="border: 0; margin-top: 8px; border-radius: 5px"
+          class="mt-2 rounded"
           v-bind:src="
             'https://www.google.com/maps/embed/v1/place?key=AIzaSyCQMbSQjawwUF2loVgW5NX5HpDp8069-HU&q=' +
             event.location
@@ -86,9 +78,4 @@ export default {
 </script>
 
 <style>
-.img-style {
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 3px;
-}
 </style>

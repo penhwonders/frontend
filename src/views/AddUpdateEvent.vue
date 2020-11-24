@@ -1,6 +1,6 @@
 <template>
-  <v-main class="text-center" style="padding: 10px; padding-top: 50px">
-    <p class="title">Add and Update new event</p>
+  <v-main class="text-center" style="padding: 10px">
+    <p class="title">Add/Update new events</p>
     <v-container>
       <v-form v-model="valid">
         <v-text-field
@@ -32,7 +32,7 @@
       </v-form>
       <AlertNotification
         v-if="Alert"
-        :data="event"
+        :event="event"
         :isNewEvent="isNewEvent"
       />
     </v-container>
@@ -63,7 +63,8 @@ export default {
                     (v) =>
                       /^https:\/\/www|web\.facebook\.com\/events\/\d{10,20}|\/$/.test(v) ||
                       'Link is invalid',
-                  ]
+                  ],
+      loading: true
     };
   },
   methods: {
@@ -72,19 +73,7 @@ export default {
         link: this.link,
       })
         .then((event) => this.eventAlert(event.data))
-        .catch(function (error) {
-          if (error.response) {
-            // Request made and server responded
-            console.log(error.response.data);
-            console.log(error.response.status);
-          } else if (error.request) {
-            // The request was made but no response was received
-            console.log(error.request);
-          } else {
-            // Something happened in setting up the request that triggered an Error
-            console.log("Error", error.message);
-          }
-        });
+        .catch((err) => this.eventAlert(err.data));
     },
     async update() {
       await Axios.put(apiUrl, {
@@ -106,10 +95,10 @@ export default {
         });
     },
     eventAlert(event) {
-      if(typeof event.body === Object){
+      if(typeof event.body === 'object'){
         this.isNewEvent = true
       }
-      else if(typeof event.body === String){
+      else if(typeof event.body === 'string'){
         this.isNewEvent = false
       }
       console.log(event.body)

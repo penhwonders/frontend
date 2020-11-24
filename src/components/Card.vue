@@ -12,10 +12,17 @@
       v-bind:src="event.image"
     ></v-img>
 
-    <v-card-title>{{ event.title.length >= 23 ? event.title.slice(0, 23) + '...' : event.title }}</v-card-title>
+    <v-card-title>{{
+      event.title.length >= 46 ? event.title.slice(0, 46) + "..." : event.title
+    }}</v-card-title>
 
     <v-card-subtitle class="pb-0">
-      <b><v-icon>mdi-account-multiple</v-icon></b> {{ event.hosts.length > 2 ? event.hosts.slice(0, 2).join(", ") + ', ...' : event.hosts.join(", ") }}<br />
+      <b><v-icon>mdi-account-multiple</v-icon></b>
+      {{
+        event.hosts.length > 2
+          ? event.hosts.slice(0, 2).join(", ") + ", ..."
+          : event.hosts.join(", ")
+      }}<br />
       <b><v-icon>mdi-clock</v-icon></b> {{ event.time }}<br />
       <b><v-icon>mdi-map-marker</v-icon></b> {{ event.location }}<br />
       <b><v-icon>mdi-layers</v-icon></b> {{ event.categories.join(", ") }}<br />
@@ -52,7 +59,7 @@ export default {
 }
 
 #card {
-  height: 430px;
+  height: 450px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -62,7 +69,7 @@ export default {
 }
 @media only screen and (min-width: 600px) {
   #image {
-    height: 200px;
+    max-height: 50%;
   }
 }
 </style>
