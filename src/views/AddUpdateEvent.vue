@@ -2,7 +2,7 @@
   <v-main class="text-center" style="padding: 10px">
     <p class="title">Add/Update new events</p>
     <v-container>
-      <v-form v-model="valid">
+      <v-form v-model="valid" ref="form">
         <v-text-field
           v-model="link"
           type="text"
@@ -25,16 +25,20 @@
           color="background primary--text"
           large
           elevation="5"
-          :disabled="link === '' || value === null ? true : false"
+          :disabled="!valid"
           @click="value === 'Add' ? add() : update()"
           >Submit</v-btn
         >
       </v-form>
       <AlertNotification
-        v-if="Alert"
         :event="event"
         :isNewEvent="isNewEvent"
+        :isFunction="functionCalled"
+        :isFeedback="false"
+        :dialog="dialog"
+        @close="dialog = false"
       />
+      <Loading :dialog="loading"/>
     </v-container>
   </v-main>
 </template>
@@ -42,6 +46,7 @@
 <script>
 import Axios from "axios";
 import AlertNotification from "../components/AlertNotification";
+import Loading from "../components/Loading";
 
 //api link
 
@@ -51,7 +56,7 @@ export default {
   name: "AddUpdateEvent",
   data() {
     return {
-      valid: true,
+      valid: false,
       link: "",
       value: null,
       items: ["Add", "Update"],
@@ -64,11 +69,15 @@ export default {
                       /^https:\/\/www|web\.facebook\.com\/events\/\d{10,20}|\/$/.test(v) ||
                       'Link is invalid',
                   ],
-      loading: true
+      loading: false,
+      functionCalled: '',
+      dialog: false
     };
   },
   methods: {
     async add() {
+      this.functionCalled = 'add'
+      this.loading = true
       await Axios.post(apiUrl, {
         link: this.link,
       })
@@ -76,10 +85,12 @@ export default {
         .catch((err) => this.eventAlert(err.data));
     },
     async update() {
+      this.functionCalled = 'update'
+      this.loading = true
       await Axios.put(apiUrl, {
         link: this.link,
       })
-        .then((event) => console.log(event.data))
+        .then((event) => this.eventAlert(event.data))
         .catch(function (error) {
           if (error.response) {
             // Request made and server responded
@@ -101,13 +112,15 @@ export default {
       else if(typeof event.body === 'string'){
         this.isNewEvent = false
       }
-      console.log(event.body)
-      console.log(this.isNewEvent);
       this.event = event
-      this.Alert = true
+      this.loading = false
+      this.dialog = true
+      this.link = ''
+      this.value = null
+      this.$refs.form.resetValidation()
     },
   },
-  components: { AlertNotification },
+  components: { AlertNotification, Loading },
 };
 </script>
 

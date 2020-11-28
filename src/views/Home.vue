@@ -108,7 +108,7 @@ export default {
       .get("https://uexxkpj143.execute-api.ap-southeast-1.amazonaws.com/dev")
       .then((response) => (this.ConstantEvents = response.data))
       .catch((error) => console.log(error));
-    // this.events = this.ConstantEvents;
+    //console.log(this.ConstantEvents);
   },
   components: { Card, DatePicker, SelectCategory, Search },
 };

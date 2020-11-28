@@ -27,32 +27,36 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <a
+          <v-btn
             class="socialUrl"
             href="https://www.instagram.com/ly_chun_/"
             target="_blank"
-            ><v-icon size="30" class="icon">mdi-instagram</v-icon></a
-          >
+            icon
+            ><v-icon size="30" class="icon">mdi-instagram</v-icon>
+          </v-btn>
           <v-spacer></v-spacer>
-          <a
+          <v-btn
             class="socialUrl"
             href="https://web.facebook.com/harry.brown.us"
             target="_blank"
-            ><v-icon size="30" class="icon">mdi-facebook</v-icon></a
+            icon
+            ><v-icon size="30" class="icon">mdi-facebook</v-icon></v-btn
           >
           <v-spacer></v-spacer>
-          <a
+          <v-btn
             class="socialUrl"
             href="https://github.com/Nel-sokchhunly"
             target="_blank"
-            ><v-icon size="30" class="icon">mdi-github</v-icon></a
+            icon
+            ><v-icon size="30" class="icon">mdi-github</v-icon></v-btn
           >
           <v-spacer></v-spacer>
-          <a
+          <v-btn
             class="socialUrl"
             href="https://www.linkedin.com/in/sokchhunly-nel-2926341b9/"
             target="_blank"
-            ><v-icon size="30" class="icon">mdi-linkedin</v-icon></a
+            icon
+            ><v-icon size="30" class="icon">mdi-linkedin</v-icon></v-btn
           >
           <v-spacer></v-spacer>
         </v-card-actions>
@@ -72,32 +76,36 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <a
+          <v-btn
             class="socialUrl"
             href="https://www.instagram.com/munyoudoum/"
             target="_blank"
-            ><v-icon size="30" class="icon">mdi-instagram</v-icon></a
+            icon
+            ><v-icon size="30" class="icon">mdi-instagram</v-icon></v-btn
           >
           <v-spacer></v-spacer>
-          <a
+          <v-btn
             class="socialUrl"
             href="https://facebook.com/munyoudoum"
             target="_blank"
-            ><v-icon size="30" class="icon">mdi-facebook</v-icon></a
+            icon
+            ><v-icon size="30" class="icon">mdi-facebook</v-icon></v-btn
           >
           <v-spacer></v-spacer>
-          <a
+          <v-btn
             class="socialUrl"
             href="https://github.com/munyoudoum"
             target="_blank"
-            ><v-icon size="30" class="icon">mdi-github</v-icon></a
+            icon
+            ><v-icon size="30" class="icon">mdi-github</v-icon></v-btn
           >
           <v-spacer></v-spacer>
-          <a
+          <v-btn
             class="socialUrl"
             href="https://www.linkedin.com/in/munyoudoum/"
             target="_blank"
-            ><v-icon size="30" class="icon">mdi-linkedin</v-icon></a
+            icon
+            ><v-icon size="30" class="icon">mdi-linkedin</v-icon></v-btn
           >
           <v-spacer></v-spacer>
         </v-card-actions>

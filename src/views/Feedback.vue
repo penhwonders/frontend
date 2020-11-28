@@ -44,16 +44,20 @@
         >
       </form>
       <AlertNotification
-        v-if="Alert"
+        :isNewEvent="false"
+        :isFunction="''"
         :isFeedback="true"
-        :title="'Thanks you for your feedback!'"
+        :dialog="dialog"
+        @close="dialog = false"
       />
+      <Loading :dialog="loading"/>
     </v-container>
   </v-main>
 </template>
 
 <script>
 import AlertNotification from "../components/AlertNotification";
+import Loading from "../components/Loading";
 import axios from "axios";
 // import qs from "querystring";
 export default {
@@ -65,12 +69,14 @@ export default {
       suggestions: "",
       feedback: "",
       type: "",
-      Alert: false,
+      dialog: false,
+      loading: false,
       items: ["Comments", "Questions", "Bug Reports", "Feature Request"],
     };
   },
   methods: {
     submit() {
+      this.loading = true
       var formElement = this.$refs.formElement;
       var formData = new FormData(formElement);
       // var formData = new FormData(document.forms["form"]);
@@ -81,20 +87,27 @@ export default {
       //   "entry.879531967": this.email,
       //   "entry.1591633300": this.type,
       // };
-      axios
-        .post(
+      axios.post(
           "https://script.google.com/macros/s/AKfycbwZ_nC0xgdNKkFGBXTDJGN1jUXI7vYByxsg7LyrNNr9rIAV6aY/exec",
           formData
         )
         .then((result) => {
-          console.log("res:" + result);
+          console.log(result);
+          this.loading = false
+          this.dialog = true
+          this.name = ""
+          this.email = ""
+          this.suggestions = ""
+          this.feedback = ""
+          this.type = ""
+          this.$refs.formElement.resetValidation()
         })
         .catch((err) => {
           console.log(err.message);
         });
     },
   },
-  components: { AlertNotification },
+  components: { AlertNotification, Loading },
 };
 </script>
 
