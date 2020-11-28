@@ -1,5 +1,5 @@
 <template>
-  <v-main class="text-center" style="padding: 10px">
+  <v-main class="text-center pa-2">
     <v-container>
       <form ref="formElement" @submit.prevent="submit">
         <v-select
@@ -50,7 +50,7 @@
         :dialog="dialog"
         @close="dialog = false"
       />
-      <Loading :dialog="loading"/>
+      <Loading :dialog="loading" />
     </v-container>
   </v-main>
 </template>
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     submit() {
-      this.loading = true
+      this.loading = true;
       var formElement = this.$refs.formElement;
       var formData = new FormData(formElement);
       // var formData = new FormData(document.forms["form"]);
@@ -87,20 +87,21 @@ export default {
       //   "entry.879531967": this.email,
       //   "entry.1591633300": this.type,
       // };
-      axios.post(
+      axios
+        .post(
           "https://script.google.com/macros/s/AKfycbwZ_nC0xgdNKkFGBXTDJGN1jUXI7vYByxsg7LyrNNr9rIAV6aY/exec",
           formData
         )
         .then((result) => {
           console.log(result);
-          this.loading = false
-          this.dialog = true
-          this.name = ""
-          this.email = ""
-          this.suggestions = ""
-          this.feedback = ""
-          this.type = ""
-          this.$refs.formElement.resetValidation()
+          this.loading = false;
+          this.dialog = true;
+          this.name = "";
+          this.email = "";
+          this.suggestions = "";
+          this.feedback = "";
+          this.type = "";
+          this.$refs.formElement.resetValidation();
         })
         .catch((err) => {
           console.log(err.message);

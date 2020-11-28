@@ -1,5 +1,5 @@
 <template>
-  <v-main class="text-center" style="padding: 20px">
+  <v-main class="text-center pa-2">
     <p class="text-h3">Penhwonders</p>
     <br />
     <p class="text-body-1 mx-5">
@@ -27,32 +27,22 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn
-            class="socialUrl"
-            href="https://www.instagram.com/ly_chun_/"
-            target="_blank"
-            icon
+          <v-btn href="https://www.instagram.com/ly_chun_/" target="_blank" icon
             ><v-icon size="30" class="icon">mdi-instagram</v-icon>
           </v-btn>
           <v-spacer></v-spacer>
           <v-btn
-            class="socialUrl"
             href="https://web.facebook.com/harry.brown.us"
             target="_blank"
             icon
             ><v-icon size="30" class="icon">mdi-facebook</v-icon></v-btn
           >
           <v-spacer></v-spacer>
-          <v-btn
-            class="socialUrl"
-            href="https://github.com/Nel-sokchhunly"
-            target="_blank"
-            icon
+          <v-btn href="https://github.com/Nel-sokchhunly" target="_blank" icon
             ><v-icon size="30" class="icon">mdi-github</v-icon></v-btn
           >
           <v-spacer></v-spacer>
           <v-btn
-            class="socialUrl"
             href="https://www.linkedin.com/in/sokchhunly-nel-2926341b9/"
             target="_blank"
             icon
@@ -77,31 +67,21 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
-            class="socialUrl"
             href="https://www.instagram.com/munyoudoum/"
             target="_blank"
             icon
             ><v-icon size="30" class="icon">mdi-instagram</v-icon></v-btn
           >
           <v-spacer></v-spacer>
-          <v-btn
-            class="socialUrl"
-            href="https://facebook.com/munyoudoum"
-            target="_blank"
-            icon
+          <v-btn href="https://facebook.com/munyoudoum" target="_blank" icon
             ><v-icon size="30" class="icon">mdi-facebook</v-icon></v-btn
           >
           <v-spacer></v-spacer>
-          <v-btn
-            class="socialUrl"
-            href="https://github.com/munyoudoum"
-            target="_blank"
-            icon
+          <v-btn href="https://github.com/munyoudoum" target="_blank" icon
             ><v-icon size="30" class="icon">mdi-github</v-icon></v-btn
           >
           <v-spacer></v-spacer>
           <v-btn
-            class="socialUrl"
             href="https://www.linkedin.com/in/munyoudoum/"
             target="_blank"
             icon
@@ -147,10 +127,6 @@ export default {
 </script>
 
 <style scoped>
-.socialUrl {
-  text-decoration: none;
-  margin: 6px;
-}
 .icon:hover {
   color: #63c6ff;
 }

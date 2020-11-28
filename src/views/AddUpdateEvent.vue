@@ -1,12 +1,11 @@
 <template>
-  <v-main class="text-center" style="padding: 10px">
+  <v-main class="text-center pa-2">
     <p class="title">Add/Update new events</p>
     <v-container>
       <v-form v-model="valid" ref="form">
         <v-text-field
           v-model="link"
           type="text"
-          autocomplete="off"
           hint="Ex: https://www.facebook.com/events/702694946989244/"
           :rules="linkRules"
           persistent-hint
@@ -38,7 +37,7 @@
         :dialog="dialog"
         @close="dialog = false"
       />
-      <Loading :dialog="loading"/>
+      <Loading :dialog="loading" />
     </v-container>
   </v-main>
 </template>
@@ -64,20 +63,20 @@ export default {
       event: null,
       isNewEvent: false,
       linkRules: [
-                    (v) => !!v || 'Link is required',
-                    (v) =>
-                      /^https:\/\/www|web\.facebook\.com\/events\/\d{10,20}|\/$/.test(v) ||
-                      'Link is invalid',
-                  ],
+        (v) => !!v || "Link is required",
+        (v) =>
+          /^https:\/\/www|web\.facebook\.com\/events\/\d{10,20}|\/$/.test(v) ||
+          "Link is invalid",
+      ],
       loading: false,
-      functionCalled: '',
-      dialog: false
+      functionCalled: "",
+      dialog: false,
     };
   },
   methods: {
     async add() {
-      this.functionCalled = 'add'
-      this.loading = true
+      this.functionCalled = "add";
+      this.loading = true;
       await Axios.post(apiUrl, {
         link: this.link,
       })
@@ -85,8 +84,8 @@ export default {
         .catch((err) => this.eventAlert(err.data));
     },
     async update() {
-      this.functionCalled = 'update'
-      this.loading = true
+      this.functionCalled = "update";
+      this.loading = true;
       await Axios.put(apiUrl, {
         link: this.link,
       })
@@ -106,18 +105,17 @@ export default {
         });
     },
     eventAlert(event) {
-      if(typeof event.body === 'object'){
-        this.isNewEvent = true
+      if (typeof event.body === "object") {
+        this.isNewEvent = true;
+      } else if (typeof event.body === "string") {
+        this.isNewEvent = false;
       }
-      else if(typeof event.body === 'string'){
-        this.isNewEvent = false
-      }
-      this.event = event
-      this.loading = false
-      this.dialog = true
-      this.link = ''
-      this.value = null
-      this.$refs.form.resetValidation()
+      this.event = event;
+      this.loading = false;
+      this.dialog = true;
+      this.link = "";
+      this.value = null;
+      this.$refs.form.resetValidation();
     },
   },
   components: { AlertNotification, Loading },
