@@ -26,7 +26,7 @@
       </v-app-bar-nav-icon>
 
       <v-toolbar-title class="primary--text" caption>
-        Jol Leng
+        Penhwonders
       </v-toolbar-title>
 
       <v-spacer></v-spacer>

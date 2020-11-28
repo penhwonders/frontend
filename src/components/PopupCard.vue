@@ -50,31 +50,6 @@
       <v-card-actions>
         <v-btn
           color="background white--text"
-          :href="
-            'https://www.google.com/calendar/render?action=TEMPLATE&text=' +
-            event.title +
-            '&dates=' +
-            event.start_time.replace(/[Z:-]/g, '') +
-            '/' +
-            event.end_time.replace(/[Z:-]/g, '') +
-            '&location=' +
-            event.location +
-            '&sprop=' +
-            event.link +
-            '%details=' +
-            event.description +
-            'sf=true&output=xml'
-          "
-          target="_blank"
-          rel="nofollow"
-        >
-          <span class="pr-1" v-if="!this.$vuetify.breakpoint.xsOnly"
-            >Calendar</span
-          >
-          <v-icon>mdi-calendar</v-icon>
-        </v-btn>
-        <v-btn
-          color="background white--text"
           :href="event.link"
           target="_blank"
         >

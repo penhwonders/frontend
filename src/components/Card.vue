@@ -4,7 +4,7 @@
     max-width="450px"
     id="card"
     color="bg"
-    elevation={premium}
+    v-bind:elevation="event.location =='Factory Phnom Penh' ? 15 : 14"
     ><span v-if="event.location == 'Factory Phnom Penh'"></span>
     <v-img id="image" v-bind:src="event.image"></v-img>
     <v-card-title>{{
@@ -40,7 +40,8 @@ export default {
   },
   computed: {
     premium() {
-      return event.location == "Factory Phnom Penh" ? "15" : "14";
+      console.log(this.event.location == "Factory Phnom Penh" ? "15" : "14")
+      return this.event.location == "Factory Phnom Penh" ? 15 : 14;
     },
   },
   components: { PopupCard },
@@ -73,7 +74,7 @@ export default {
   }
 }
 :root .v-application .elevation-15 {
-  box-shadow: 0 0 6px 3px #fff, /* inner white */ 0 0 10px 6px #f0f,
-    /* middle magenta */ 0 0 14px 9px #0ff !important;
+  box-shadow: 0 0 3px 2px #fff, /* inner white */ 0 0 5px 3px rgb(255, 210, 7),
+    /* middle magenta */ 0 0 7px 5px rgb(54, 54, 53) !important;
 }
 </style>
