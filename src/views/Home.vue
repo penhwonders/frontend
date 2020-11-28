@@ -2,16 +2,34 @@
   <v-container>
     <Search
       v-if="$store.state.searchType == 'search'"
-      v-on:SearchToHome="(searchData) => (search = searchData)"
+      v-on:SearchToHome="
+        (searchData) => {
+          search = searchData;
+          selectedDates = [];
+          selectedCategories = [];
+        }
+      "
     />
 
     <DatePicker
       v-if="$store.state.searchType == 'calendar'"
-      v-on:DateToHome="(dates) => (selectedDates = dates)"
+      v-on:DateToHome="
+        (dates) => {
+          selectedDates = dates;
+          selectedCategories = [];
+          search = '';
+        }
+      "
     />
     <SelectCategory
       v-if="$store.state.searchType == 'category'"
-      v-on:CategoryToHome="(categories) => (selectedCategories = categories)"
+      v-on:CategoryToHome="
+        (categories) => {
+          selectedCategories = categories;
+          selectedDates = [];
+          search = '';
+        }
+      "
     />
     <v-layout row wrap justify-start v-if="ConstantEvents.length !== 0">
       <v-flex
@@ -27,15 +45,7 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap justify-start v-else>
-      <v-flex
-        xs12
-        sm6
-        md4
-        lg3
-        xl3
-        v-for="n in 8"
-        :key="n"
-      >
+      <v-flex xs12 sm6 md4 lg3 xl3 v-for="n in 8" :key="n">
         <v-skeleton-loader
           class="mx-2 mb-3 card-outter"
           max-width="450px"

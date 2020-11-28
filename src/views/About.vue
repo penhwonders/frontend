@@ -10,8 +10,7 @@
       from a list of registered facebook pages once everyday at 12:30am by our
       automated web scraping system.
     </p>
-    <br />
-    <p class="text-h6">Our team</p>
+    <p class="text-h4">Our team</p>
     <v-layout row wrap justify-center>
       <v-card class="card mx-5 my-5 card-outter" elevation="15">
         <v-img
@@ -60,7 +59,7 @@
       </v-card>
       <v-card class="card mx-5 my-5 card-outter" elevation="15">
         <v-img
-          eight="280px"
+          height="280px"
           width="280px"
           src="../assets/Pav Munyoudoum_A.png"
         ></v-img>
@@ -68,8 +67,8 @@
           Munyoudoum Pav
         </v-card-title>
         <v-card-text>
-          Backend/Frontend Developer <br />
-          Automation
+          Web Automation<br />
+          Backend Developer<br />Frontend Developer
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -104,6 +103,29 @@
         </v-card-actions>
       </v-card>
     </v-layout>
+    <p class="text-h3"></p>
+    <v-expansion-panels accordion>
+      <v-expansion-panel>
+        <v-expansion-panel-header class="title"
+          >How did Penhwonders start?</v-expansion-panel-header
+        >
+        <v-expansion-panel-content></v-expansion-panel-content>
+      </v-expansion-panel>
+      <v-expansion-panel>
+        <v-expansion-panel-header class="title"
+          >How did Penhwonders get recovered back?</v-expansion-panel-header
+        >
+        <v-expansion-panel-content
+          >Starting from a conversation
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+      <v-expansion-panel>
+        <v-expansion-panel-header class="title"
+          >How do I register my events on your website</v-expansion-panel-header
+        >
+        <v-expansion-panel-content></v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
   </v-main>
 </template>
 

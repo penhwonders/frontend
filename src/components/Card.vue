@@ -4,10 +4,9 @@
     max-width="450px"
     id="card"
     color="bg"
-    elevation="15"
-  >
+    elevation={premium}
+    ><span v-if="event.location == 'Factory Phnom Penh'"></span>
     <v-img id="image" v-bind:src="event.image"></v-img>
-
     <v-card-title>{{
       event.title.length >= 46 ? event.title.slice(0, 46) + "..." : event.title
     }}</v-card-title>
@@ -39,6 +38,11 @@ export default {
   props: {
     event: Object,
   },
+  computed: {
+    premium() {
+      return event.location == "Factory Phnom Penh" ? "15" : "14";
+    },
+  },
   components: { PopupCard },
 };
 </script>
@@ -67,5 +71,9 @@ export default {
   #image {
     max-height: 50%;
   }
+}
+:root .v-application .elevation-15 {
+  box-shadow: 0 0 6px 3px #fff, /* inner white */ 0 0 10px 6px #f0f,
+    /* middle magenta */ 0 0 14px 9px #0ff !important;
 }
 </style>
