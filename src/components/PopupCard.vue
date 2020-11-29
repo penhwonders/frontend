@@ -28,7 +28,6 @@
         Description:<br />
         {{ event.description }}
         <div v-if="event.location != 'Online event' && event.location != ''">
-          Google map:
           <iframe
             width="100%"
             height="280px"
@@ -36,14 +35,13 @@
             class="mt-2 rounded"
             v-bind:src="
               'https://www.google.com/maps/embed/v1/place?key=AIzaSyCQMbSQjawwUF2loVgW5NX5HpDp8069-HU&q=' +
-                event.location
+              event.location
             "
             allowfullscreen
           >
           </iframe>
           <br />
-          <b>Note: Google Maps location here is not always correct </b
-          >
+          <b>Note: Google Maps location here is not always correct </b>
         </div>
       </v-card-text>
       <v-divider></v-divider>
@@ -58,23 +56,34 @@
         </v-btn>
         <v-btn
           color="background white--text"
-          :href="'https://www.google.com/calendar/render?action=TEMPLATE&text=' + event.title 
-                  + '&dates=' + event.start_time.replace(/:|-|Z/g, '')
-                  + '/' + event.end_time.replace(/:|-|Z/g, '')
-                  + '&location=' + event.location 
-                  + '&sprop=' + event.link
-                  + '&details=' + event.description" 
-          target="_blank"      
-          rel="nofollow" 
+          :href="
+            'https://www.google.com/calendar/render?action=TEMPLATE&text=' +
+            event.title +
+            '&dates=' +
+            event.start_time.replace(/:|-|Z/g, '') +
+            '/' +
+            event.end_time.replace(/:|-|Z/g, '') +
+            '&details=' +
+            event.description
+              .replaceAll('\n', '%3Cbr%3E')
+              .replaceAll('&', '%26') +
+            '&location=' +
+            event.location +
+            '&trp=false&sprop=&sprop=name:'
+          "
+          target="_blank"
+          rel="nofollow"
         >
-          <span class="pr-1" v-if="!this.$vuetify.breakpoint.xsOnly">Calendar</span>
+          <span class="pr-1" v-if="!this.$vuetify.breakpoint.xsOnly"
+            >Calendar</span
+          >
           <v-icon>mdi-calendar</v-icon>
         </v-btn>
         <v-btn
           color="background white--text"
           :href="event.ticket"
-          target="_blank" 
-          v-if="event.ticket !== ''" 
+          target="_blank"
+          v-if="event.ticket !== ''"
         >
           <span class="pr-1" v-if="!this.$vuetify.breakpoint.xs">Ticket</span>
           <v-icon>mdi-ticket</v-icon>
