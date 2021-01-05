@@ -23,6 +23,8 @@ export default new Vuetify({
       dark: {
         primary: colorPallete.primary,
         secondary: colorPallete.secondary,
+        success: colorPallete.success,  
+        background: colorPallete.bg,
       },
     },
   },

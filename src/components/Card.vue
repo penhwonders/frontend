@@ -4,9 +4,14 @@
     max-width="450px"
     id="card"
     color="bg"
-    v-bind:elevation="event.location =='Factory Phnom Penh' ? 15 : 14"
-    ><span v-if="event.location == 'Factory Phnom Penh'"></span>
-    <v-img id="image" v-bind:src="event.image"></v-img>
+    v-bind:elevation="15"
+    >
+  
+    <v-img id="image" v-bind:src="event.image" @load="onImgLoad"></v-img>
+    <!-- <div v-else>
+      <v-img id="err_img" src="../assets/error image.jpg"></v-img>
+    </div> -->
+
     <v-card-title>{{
       event.title.length >= 46 ? event.title.slice(0, 46) + "..." : event.title
     }}</v-card-title>
@@ -37,6 +42,16 @@ export default {
   name: "Card",
   props: {
     event: Object,
+  },
+  data() {
+    return {
+      isLoaded: false
+    }
+  },
+  methods: {
+    onImgLoad() {
+      this.isLoaded = true
+    }
   },
   computed: {
     premium() {
@@ -72,9 +87,5 @@ export default {
   #image {
     max-height: 50%;
   }
-}
-:root .v-application .elevation-15 {
-  box-shadow: 0 0 3px 2px #fff, /* inner white */ 0 0 5px 3px rgb(255, 210, 7),
-    /* middle magenta */ 0 0 7px 5px rgb(54, 54, 53) !important;
 }
 </style>

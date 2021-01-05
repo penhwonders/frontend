@@ -49,7 +49,7 @@ import Loading from "../components/Loading";
 
 //api link
 
-var apiUrl = "https://wqh9ckdbre.execute-api.ap-southeast-1.amazonaws.com/dev";
+let apiUrl = "https://wqh9ckdbre.execute-api.ap-southeast-1.amazonaws.com/dev";
 
 export default {
   name: "AddUpdateEvent",

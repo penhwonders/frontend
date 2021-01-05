@@ -1,6 +1,6 @@
 <template>
-  <v-main class="text-center pa-2">
-    <p class="text-h3">About Penhwonders</p>
+  <v-main class="text-center pa-5">
+    <p class="text-h3 pt-5">About Penhwonders</p>
     <br />
     <p class="text-body-1 mx-5">
       Welcome to a renovation of Penhwonders! <br />
@@ -62,7 +62,7 @@
         </v-card-title>
         <v-card-text>
           Web Automation<br />
-          Backend Developer<br />Frontend Developer
+          Backend/Frontend Developer
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
