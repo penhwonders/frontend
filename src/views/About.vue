@@ -27,7 +27,7 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn href="https://www.instagram.com/ly_chun_/" target="_blank" icon
+          <v-btn href="https://www.instagram.com/potatoes_head_/" target="_blank" icon
             ><v-icon size="30" class="icon">mdi-instagram</v-icon>
           </v-btn>
           <v-spacer></v-spacer>

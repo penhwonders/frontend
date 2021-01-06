@@ -12,7 +12,6 @@ const colorPallete = {
 
 export default new Vuetify({
   theme: {
-    dark: localStorage.getItem("dark_theme"),
     themes: {
       light: {
         primary: colorPallete.primary,
