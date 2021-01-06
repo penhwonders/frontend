@@ -83,6 +83,13 @@
             >About</v-btn
           ></v-list-item
         >
+        <!-- Donation button -->
+        <v-list-item>
+          <v-btn to="/Donation" width="100%" color="primary " text
+            >Support Us <v-icon class="ml-2">mdi-heart</v-icon>
+          </v-btn>
+        </v-list-item>
+        <!-- Dark mode switch -->
         <v-list-item>
           <v-spacer></v-spacer>
           <v-switch
@@ -152,4 +159,8 @@ export default {
 </script>
 
 <style scoped>
+.donation-btn {
+  position: absolute;
+  bottom: 0;
+}
 </style>

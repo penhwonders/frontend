@@ -6,6 +6,7 @@ import Home from "../views/Home";
 import About from "../views/About";
 import Feedback from "../views/Feedback";
 import AddUpdateEvent from "../views/AddUpdateEvent";
+import Donation from "../views/Donation";
 
 vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
     path: "/AddUpdateEvent",
     name: "AddUpdateEvent",
     component: AddUpdateEvent,
+  },
+  {
+    path: "/Donation",
+    name: "Donation",
+    component: Donation,
   },
 ];
 
