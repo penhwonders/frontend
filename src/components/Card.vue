@@ -8,9 +8,9 @@
     >
   
     <v-img id="image" v-bind:src="event.image" @load="onImgLoad"></v-img>
-    <!-- <div v-else>
+    <div v-if="!isLoaded">
       <v-img id="err_img" src="../assets/error image.jpg"></v-img>
-    </div> -->
+    </div>
 
     <v-card-title>{{
       event.title.length >= 46 ? event.title.slice(0, 46) + "..." : event.title

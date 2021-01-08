@@ -10,7 +10,6 @@
         }
       "
     />
-
     <DatePicker
       v-if="$store.state.searchType == 'calendar'"
       v-on:DateToHome="
@@ -108,11 +107,9 @@ export default {
       .get("https://r3cb95wvli.execute-api.ap-southeast-1.amazonaws.com/dev")
       .then((response) => (this.ConstantEvents = response.data))
       .catch((error) => console.log(error));
-    //console.log(this.ConstantEvents);
   },
   components: { Card, DatePicker, SelectCategory, Search },
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
