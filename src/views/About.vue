@@ -61,7 +61,7 @@
         <v-img
           height="280px"
           width="280px"
-          src="../assets/Pav Munyoudoum_A.png"
+          src="../assets/MunyoudoumPav.jpg"
         ></v-img>
         <v-card-title primary-title class="justify-center">
           Munyoudoum Pav
