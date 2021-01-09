@@ -12,7 +12,7 @@
         <v-textarea
           v-model="feedback"
           name="Feedback"
-          label="Feedback"
+          label="Feedback *"
           :rules="[(v) => !!v || 'Please fill in the feedback']"
           outlined
         ></v-textarea>
