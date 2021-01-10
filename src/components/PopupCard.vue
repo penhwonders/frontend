@@ -35,7 +35,7 @@
             class="mt-2 rounded"
             v-bind:src="
               'https://www.google.com/maps/embed/v1/place?key=AIzaSyCQMbSQjawwUF2loVgW5NX5HpDp8069-HU&q=' +
-              event.location
+              event.location.replaceAll('&', '%26')
             "
             allowfullscreen
           >
