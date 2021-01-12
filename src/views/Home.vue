@@ -30,7 +30,7 @@
         }
       "
     />
-    <v-layout row wrap justify-start v-if="ConstantEvents.length !== 0">
+    <v-layout row wrap justify-start >
       <v-flex
         xs12
         sm6
@@ -43,7 +43,7 @@
         <Card :event="event" />
       </v-flex>
     </v-layout>
-    <v-layout row wrap justify-start v-else>
+    <v-layout row wrap justify-start v-if="ConstantEvents.length === 0 && isError == false">
       <v-flex xs12 sm6 md4 lg3 xl3 v-for="n in 8" :key="n">
         <v-skeleton-loader
           class="mx-2 mb-3 card-outter"
@@ -52,6 +52,18 @@
         ></v-skeleton-loader>
       </v-flex>
     </v-layout>
+    <v-card v-else>
+      <v-card-text class="text-center">
+        <img src="https://img.icons8.com/color/48/000000/error--v3.png"/> <br>
+        <span class="headline">Technical issue!</span><br>
+        <span class="text-subtitle-2">
+          Please report to us! <br>
+          Email: support@penhwonders.com <br>
+          FB: <a href="#facebook" class="socialmedia">Penhwonders</a> <br>
+          IG: <a href="#Instagram" class="socialmedia">Penhwonders</a>
+        </span>
+      </v-card-text>
+    </v-card>
   </v-container>
 </template>
 
@@ -68,6 +80,7 @@ export default {
     selectedCategories: [],
     selectedDates: [],
     search: "",
+    isError: false
   }),
   computed: {
     filteredEvents() {
@@ -106,10 +119,17 @@ export default {
     await axios
       .get("https://r3cb95wvli.execute-api.ap-southeast-1.amazonaws.com/dev")
       .then((response) => (this.ConstantEvents = response.data))
-      .catch((error) => console.log(error));
+      .catch(() => {
+        console.log(111)
+        this.isError = true
+      });
   },
   components: { Card, DatePicker, SelectCategory, Search },
 };
 </script>
 
-<style scoped></style>
+<style>
+.socialmedia {
+  text-decoration: none;
+}
+</style>
