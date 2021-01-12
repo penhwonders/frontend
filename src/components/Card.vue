@@ -5,15 +5,14 @@
     id="card"
     color="bg"
     v-bind:elevation="15"
-    >
-  
+  >
     <v-img id="image" v-bind:src="event.image" @load="onImgLoad"></v-img>
     <div v-if="!isLoaded">
       <v-img id="err_img" src="../assets/error image.jpg"></v-img>
     </div>
 
     <v-card-title>{{
-      event.title.length >= 46 ? event.title.slice(0, 46) + "..." : event.title
+      event.title.length >= 73 ? event.title.slice(0, 70) + "..." : event.title
     }}</v-card-title>
 
     <v-card-subtitle class="pb-0">
@@ -45,18 +44,12 @@ export default {
   },
   data() {
     return {
-      isLoaded: false
-    }
+      isLoaded: false,
+    };
   },
   methods: {
     onImgLoad() {
-      this.isLoaded = true
-    }
-  },
-  computed: {
-    premium() {
-      console.log(this.event.location == "Factory Phnom Penh" ? "15" : "14")
-      return this.event.location == "Factory Phnom Penh" ? 15 : 14;
+      this.isLoaded = true;
     },
   },
   components: { PopupCard },

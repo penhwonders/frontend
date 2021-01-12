@@ -4,17 +4,54 @@
     <p class="text-h3 pt-5">About Penhwonders</p>
     <br />
     <p class="text-body-1 mx-5">
-      Welcome to a renovation of Penhwonders! <br />
       A web application + Automation built by Cambodian college students to help
-      your life easier in finding and promoting wonderful events in this amazing
-      capital city of Cambodia, Phnom Penh! The events are automatically updated
-      from a list of registered facebook pages once everyday at 12:30am by our
-      automated web scraping system.
+      your life easier in finding and promoting wonderful events in Phnom Penh!
+      The events are automatically updated from a list of registered Facebook
+      pages once everyday at 12:30am by our automated web scraping system.
     </p>
 
     <!-- Team member section -->
     <p class="text-h4">Our team</p>
     <v-layout row wrap justify-center>
+      <v-card class="card mx-5 my-5 card-outter" elevation="10">
+        <v-img
+          height="280px"
+          width="280px"
+          src="../assets/MunyoudoumPav.jpg"
+        ></v-img>
+        <v-card-title primary-title class="justify-center">
+          Munyoudoum Pav
+        </v-card-title>
+        <v-card-text>
+          Web Automation<br />
+          Full Stack Developer
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            href="https://www.instagram.com/munyoudoum/"
+            target="_blank"
+            icon
+            ><v-icon size="30" class="icon">mdi-instagram</v-icon></v-btn
+          >
+          <v-spacer></v-spacer>
+          <v-btn href="https://facebook.com/munyoudoum" target="_blank" icon
+            ><v-icon size="30" class="icon">mdi-facebook</v-icon></v-btn
+          >
+          <v-spacer></v-spacer>
+          <v-btn href="https://github.com/munyoudoum" target="_blank" icon
+            ><v-icon size="30" class="icon">mdi-github</v-icon></v-btn
+          >
+          <v-spacer></v-spacer>
+          <v-btn
+            href="https://www.linkedin.com/in/munyoudoum/"
+            target="_blank"
+            icon
+            ><v-icon size="30" class="icon">mdi-linkedin</v-icon></v-btn
+          >
+          <v-spacer></v-spacer>
+        </v-card-actions>
+      </v-card>
       <v-card class="card mx-5 my-5 card-outter" elevation="15">
         <v-img
           height="280px"
@@ -57,69 +94,52 @@
           <v-spacer></v-spacer>
         </v-card-actions>
       </v-card>
-      <v-card class="card mx-5 my-5 card-outter" elevation="15">
-        <v-img
-          height="280px"
-          width="280px"
-          src="../assets/MunyoudoumPav.jpg"
-        ></v-img>
-        <v-card-title primary-title class="justify-center">
-          Munyoudoum Pav
-        </v-card-title>
-        <v-card-text>
-          Web Automation<br />
-          Backend/Frontend Developer
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            href="https://www.instagram.com/munyoudoum/"
-            target="_blank"
-            icon
-            ><v-icon size="30" class="icon">mdi-instagram</v-icon></v-btn
-          >
-          <v-spacer></v-spacer>
-          <v-btn href="https://facebook.com/munyoudoum" target="_blank" icon
-            ><v-icon size="30" class="icon">mdi-facebook</v-icon></v-btn
-          >
-          <v-spacer></v-spacer>
-          <v-btn href="https://github.com/munyoudoum" target="_blank" icon
-            ><v-icon size="30" class="icon">mdi-github</v-icon></v-btn
-          >
-          <v-spacer></v-spacer>
-          <v-btn
-            href="https://www.linkedin.com/in/munyoudoum/"
-            target="_blank"
-            icon
-            ><v-icon size="30" class="icon">mdi-linkedin</v-icon></v-btn
-          >
-          <v-spacer></v-spacer>
-        </v-card-actions>
-      </v-card>
-    </v-layout>    
+    </v-layout>
 
     <!-- FAQs section -->
     <p class="text-h4">FAQs</p>
-    <v-expansion-panels accordion>
+    <v-expansion-panels accordion multiple>
       <v-expansion-panel>
         <v-expansion-panel-header class="title"
-          >How did Penhwonders start?</v-expansion-panel-header
+          >What is the purpose of this website?</v-expansion-panel-header
         >
         <v-expansion-panel-content></v-expansion-panel-content>
       </v-expansion-panel>
       <v-expansion-panel>
         <v-expansion-panel-header class="title"
-          >How did Penhwonders get recovered back?</v-expansion-panel-header
+          >How do I register my events on your
+          website?</v-expansion-panel-header
         >
-        <v-expansion-panel-content
-          >Starting from a conversation
+        <v-expansion-panel-content>
+          If your business frequently has events, feel free to contact and
+          register your Facebook page with us, we are happy to have you on
+          board! <br />Otherwise, if your page rarely have events, you can just
+          add one on
+          <a href="http://penhwonders.com/AddUpdateEvent"
+            >Add/Update new events</a
+          >
+          anytime.
         </v-expansion-panel-content>
       </v-expansion-panel>
       <v-expansion-panel>
         <v-expansion-panel-header class="title"
-          >How do I register my events on your website</v-expansion-panel-header
+          >How long did it take to develop this web
+          app?</v-expansion-panel-header
         >
-        <v-expansion-panel-content></v-expansion-panel-content>
+        <v-expansion-panel-content>
+          <p class="font-italic">
+            "I started working on it since mid September 2020 as a side project
+            with no knowledge on web scraping and aws server, some knowledge on
+            api and databases. While being busy for 8h a day, I spare extra 0-4h
+            a day to learn and develop along the way. I asked Chhunly who was
+            also a beginner in Vue.js to work on the frontend after done with
+            70% of the backend. Since I know some Vue.js, I helped on some parts
+            of the frontend. The development was roughly around 3 months and
+            probably total hours of 400-450 hours combined. I would say we are
+            happy with what we have made."
+          </p>
+          - Munyoudoum Pav
+        </v-expansion-panel-content>
       </v-expansion-panel>
       <v-expansion-panel>
         <v-expansion-panel-header class="title"
@@ -127,11 +147,7 @@
         >
         <v-expansion-panel-content>
           <v-layout row wrap justify-center>
-            <v-chip
-              class="ma-2"
-              v-for="page in pageList"
-              :key="page.name"
-            >
+            <v-chip class="ma-2" v-for="page in pageList" :key="page.name">
               <div class="d-flex flex-no-wrap align-center">
                 <div>
                   <v-avatar size="30" class="mr-2">
@@ -145,6 +161,7 @@
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
+    <p class="text-h4 mt-2">Contact Us</p>
   </v-main>
 </template>
 

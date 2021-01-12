@@ -1,13 +1,12 @@
 <template>
   <v-main class="text-center pa-2">
-    <p class="title">Add/Update new events</p>
     <v-container>
       <v-form v-model="valid" ref="form">
         <v-text-field
           v-model="link"
           type="text"
-          hint="Ex: https://www.facebook.com/events/702694946989244/"
           :rules="linkRules"
+          placeholder="https://www.facebook.com/events/1234567890/"
           persistent-hint
           outlined
           label="Facebook event link"
@@ -16,7 +15,7 @@
           :items="items"
           v-model="value"
           outlined
-          :rules="[(v) => !!v || 'Item is required']"
+          :rules="[(v) => !!v || 'It is not that hard to decide ^_^']"
           label="Type"
           menu-props="offset-y"
         ></v-select>
@@ -63,10 +62,11 @@ export default {
       event: null,
       isNewEvent: false,
       linkRules: [
-        (v) => !!v || "Link is required",
+        (v) => !!v || "You can't leave me empty :( ",
         (v) =>
-          /^https:\/\/www|web\.facebook\.com\/events\/\d{10,20}|\/$/.test(v) ||
-          "Link is invalid",
+          /^https:\/\/(www|web)\.facebook\.com\/events\/\d{10,20}\/?$/.test(
+            v
+          ) || "Please put in a valid link (づ｡◕‿‿◕｡)づ",
       ],
       loading: false,
       functionCalled: "",

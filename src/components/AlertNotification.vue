@@ -7,6 +7,7 @@
       width="330px"
       transition="dialog-transition"
   >
+  <!-- new event + popup -->
     <v-card v-if="dialog && isNewEvent === true && isFeedback === false">
         <v-card-title class="justify-center" v-if="isFunction === 'add'">
             Event added
@@ -23,6 +24,7 @@
             <v-spacer></v-spacer>
         </v-card-actions>
     </v-card>
+    <!-- popup event error -->
     <v-card v-else-if="dialog && isNewEvent === false && isFeedback === false">
     <v-card-title class="justify-center">
         {{event.body}}
@@ -34,6 +36,7 @@
         <v-spacer></v-spacer>
     </v-card-actions>
     </v-card>
+    <!-- Feedback -->
     <v-card v-else-if="dialog && isNewEvent === false && isFeedback === true">
         <v-card-title class="justify-center align-center">
             Thanks for your feedback <v-icon class="pl-1">mdi-check-circle</v-icon>

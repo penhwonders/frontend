@@ -68,7 +68,7 @@
         <!-- Add and Update event button -->
         <v-list-item
           ><v-btn to="/AddUpdateEvent" width="100%" color="primary " text
-            >Add/Update new event</v-btn
+            >Add/Update new events</v-btn
           ></v-list-item
         >
         <!-- Feedback button -->
@@ -147,11 +147,11 @@ export default {
   mounted() {
     const theme = localStorage.getItem("dark_theme");
     if (theme) {
-        if (theme == "true") {
-            this.$vuetify.theme.dark = true;
-        } else {
-            this.$vuetify.theme.dark = false;
-        }
+      if (theme == "true") {
+        this.$vuetify.theme.dark = true;
+      } else {
+        this.$vuetify.theme.dark = false;
+      }
     }
   },
   components: {},

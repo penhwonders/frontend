@@ -99,7 +99,7 @@ export default {
           this.name = "";
           this.email = "";
           this.suggestions = "";
-          this.feedback = "";
+          this.feedback = " ";
           this.type = "";
           this.$refs.formElement.resetValidation();
         })
