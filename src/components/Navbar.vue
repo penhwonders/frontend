@@ -57,7 +57,13 @@
     </v-app-bar>
 
     <!-- Drawer -->
-    <v-navigation-drawer v-model="drawer" color="background" app justify-space-between>
+    <v-navigation-drawer
+      style="height: 100%"
+      v-model="drawer"
+      color="background"
+      app
+      justify-space-between
+    >
       <v-list>
         <!-- Home button -->
         <v-list-item
@@ -103,14 +109,12 @@
           <v-spacer></v-spacer>
         </v-list-item>
       </v-list>
-      
+
       <template v-slot:append>
-        <div class="pa-5 mb-10">
-        <span>Contact US!</span> <br>
-        support@penhwonders.com <br>
-        FB: <a href="#facebook" class="socialmedia">Penhwonders</a> <br>
+        <span>Contact US!</span> <br />
+        support@penhwonders.com <br />
+        FB: <a href="#facebook" class="socialmedia">Penhwonders</a> <br />
         IG: <a href="#Instagram" class="socialmedia">Penhwonders</a>
-      </div>
       </template>
     </v-navigation-drawer>
   </v-card>

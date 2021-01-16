@@ -95,7 +95,17 @@
         </v-card-actions>
       </v-card>
     </v-layout>
-
+    <p class="text-h4">Appreciation</p>
+    <p>
+      There wouldn't be Penhwonders here without
+      <a href="https://www.facebook.com/bohdan.vorozhtsov/" target="_blank"
+        >Bogdan Vorozhtsov</a
+      >
+      who founded in late 2017. The previous website needed to manually add
+      events to the website. With a new idea of his to do web scraping on
+      Facebook to automate the process of adding events, it leads to a new
+      Penhwonders.
+    </p>
     <!-- FAQs section -->
     <p class="text-h4">FAQs</p>
     <v-expansion-panels accordion multiple>
@@ -103,7 +113,14 @@
         <v-expansion-panel-header class="title"
           >What is the purpose of this website?</v-expansion-panel-header
         >
-        <v-expansion-panel-content></v-expansion-panel-content>
+        <v-expansion-panel-content
+          >To explore events easier and help the flow of traffic to some events.
+          With the search, categories, dates filtering functions, add to Google
+          Calendar, a neat and beautiful user experience and interface, finding
+          events will be at ease in comparision to Facebook website. At the time
+          of writing this, covid19 has affected a lot of businesses, and we hope
+          that this will, in some ways, help them rise up again.
+        </v-expansion-panel-content>
       </v-expansion-panel>
       <v-expansion-panel>
         <v-expansion-panel-header class="title"
@@ -134,11 +151,29 @@
             a day to learn and develop along the way. I asked Chhunly who was
             also a beginner in Vue.js to work on the frontend after done with
             70% of the backend. Since I know some Vue.js, I helped on some parts
-            of the frontend. The development was roughly around 3 months and
-            probably total hours of 400-450 hours combined. I would say we are
+            of the frontend. The development was roughly around 2.5 months and
+            probably total hours of 350-450 hours combined. I would say we are
             happy with what we have made."
           </p>
           - Munyoudoum Pav
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+      <v-expansion-panel>
+        <v-expansion-panel-header class="title"
+          >Why don't I just look at events on
+          Facebook?</v-expansion-panel-header
+        >
+        <v-expansion-panel-content>
+          <p>
+            There are some features like better searching functions than
+            Facebook. You can select multiple dates and find the events of the
+            days that you are available. Adding the event to Google Calendar is
+            also another thing to improve your experience. Of course, this web
+            app is not complete and has a lot of potential to be improved like
+            having a chatbox to connect with other people to socialize and meet
+            new people with the same interest of events as you, so any feature
+            requests are welcome.
+          </p>
         </v-expansion-panel-content>
       </v-expansion-panel>
       <v-expansion-panel>
