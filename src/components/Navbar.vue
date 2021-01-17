@@ -73,26 +73,26 @@
         >
         <!-- Add and Update event button -->
         <v-list-item
-          ><v-btn to="/AddUpdateEvent" width="100%" color="primary " text
+          ><v-btn to="/AddUpdateEvent" width="100%" color="primary" text
             >Add/Update new events</v-btn
           ></v-list-item
         >
         <!-- Feedback button -->
         <v-list-item
-          ><v-btn to="/Feedback" width="100%" color="primary " text
+          ><v-btn to="/Feedback" width="100%" color="primary" text
             >Feedback</v-btn
           ></v-list-item
         >
         <!-- About button -->
         <v-list-item
-          ><v-btn to="/About" width="100%" color="primary " text
+          ><v-btn to="/About" width="100%" color="primary" text
             >About</v-btn
           ></v-list-item
         >
         <!-- Donation button -->
         <v-list-item>
-          <v-btn to="/Donation" width="100%" color="primary " text
-            >Support Us <v-icon class="ml-2">mdi-heart</v-icon>
+          <v-btn to="/Donation" width="100%" color="primary" text
+            >Support Us<v-icon class="ml-2">mdi-heart</v-icon>
           </v-btn>
         </v-list-item>
         <!-- Dark mode switch -->
@@ -111,10 +111,25 @@
       </v-list>
 
       <template v-slot:append>
-        <span>Contact US!</span> <br />
-        support@penhwonders.com <br />
-        FB: <a href="#facebook" class="socialmedia">Penhwonders</a> <br />
-        IG: <a href="#Instagram" class="socialmedia">Penhwonders</a>
+        <div class="ma-3">
+          <v-chip color="primary"> @penhwonders </v-chip>
+          <v-btn
+            href="https://www.instagram.com/penhwonders/"
+            target="_blank"
+            icon
+            dark
+            class="mx-2"
+            ><v-icon large class="icon">mdi-instagram</v-icon>
+          </v-btn>
+
+          <v-btn
+            icon
+            dark
+            href="https://web.facebook.com/penhwonders"
+            target="_blank"
+            ><v-icon large class="icon">mdi-facebook</v-icon></v-btn
+          >
+        </div>
       </template>
     </v-navigation-drawer>
   </v-card>

@@ -11,7 +11,7 @@
     </p>
 
     <!-- Team member section -->
-    <p class="text-h4">Our team</p>
+    <p class="text-h4">Developers</p>
     <v-layout row wrap justify-center>
       <v-card class="card mx-5 my-5 card-outter" elevation="10">
         <v-img
@@ -95,17 +95,53 @@
         </v-card-actions>
       </v-card>
     </v-layout>
+
     <p class="text-h4">Appreciation</p>
-    <p>
-      There wouldn't be Penhwonders here without
-      <a href="https://www.facebook.com/bohdan.vorozhtsov/" target="_blank"
-        >Bogdan Vorozhtsov</a
-      >
-      who founded in late 2017. The previous website needed to manually add
-      events to the website. With a new idea of his to do web scraping on
-      Facebook to automate the process of adding events, it leads to a new
-      Penhwonders.
-    </p>
+    <v-card
+      class="card mx-auto my-5 card-outter"
+      elevation="15"
+      max-width="280px"
+    >
+      <v-img
+        height="280px"
+        width="280px"
+        src="https://scontent.fpnh10-1.fna.fbcdn.net/v/t31.0-8/30051572_2220357591313909_4641579719232818028_o.jpg?_nc_cat=102&ccb=2&_nc_sid=174925&_nc_ohc=XGTCjqqj5kgAX8rMWeH&_nc_ht=scontent.fpnh10-1.fna&oh=303743e98923328c1af180f59afca2d1&oe=602A30BB"
+      ></v-img>
+      <v-card-title primary-title class="justify-center">
+        Bogdan Vorozhtsov
+        <br />
+        Founder
+      </v-card-title>
+      <v-card-text>
+        founded Penhwonders in late 2017. The previous website needed to
+        manually add events to the website. With a new idea of his to do web
+        scraping on Facebook to automate the process of adding events, it leads
+        to a new Penhwonders website.
+      </v-card-text>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn href="https://www.instagram.com/sixsixone6/" target="_blank" icon
+          ><v-icon size="30" class="icon">mdi-instagram</v-icon>
+        </v-btn>
+        <v-spacer></v-spacer>
+        <v-btn
+          href="https://www.facebook.com/bohdan.vorozhtsov/"
+          target="_blank"
+          icon
+          ><v-icon size="30" class="icon">mdi-facebook</v-icon></v-btn
+        >
+        <v-spacer></v-spacer>
+
+        <v-btn
+          href="https://www.linkedin.com/in/bogdan-vorozhtsov-0aa215120"
+          target="_blank"
+          icon
+          ><v-icon size="30" class="icon">mdi-linkedin</v-icon></v-btn
+        >
+        <v-spacer></v-spacer>
+      </v-card-actions>
+    </v-card>
+
     <!-- FAQs section -->
     <p class="text-h4">FAQs</p>
     <v-expansion-panels accordion multiple>
@@ -196,7 +232,6 @@
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
-    <p class="text-h4 mt-2">Contact Us</p>
   </v-main>
 </template>
 
