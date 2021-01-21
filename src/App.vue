@@ -38,4 +38,10 @@ export default {
   background-color: #63c6ff;
   border: none;
 }
+
+:root .v-application .elevation-1 {
+  box-shadow: 0 0 1px 2px rgb(32, 74, 129),
+    /* inner white */ 0 0 10px 5px rgb(180, 179, 241),
+    /* middle magenta */ 0 0 6px 5px rgb(99, 198, 255) !important;
+}
 </style>

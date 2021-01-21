@@ -4,7 +4,7 @@
     max-width="450px"
     id="card"
     color="bg"
-    v-bind:elevation="15"
+    elevation="15"
   >
     <v-img id="image" v-bind:src="event.image" @load="onImgLoad"></v-img>
     <div v-if="!isLoaded">
@@ -81,4 +81,5 @@ export default {
     max-height: 50%;
   }
 }
+
 </style>

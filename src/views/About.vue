@@ -204,11 +204,13 @@
             There are some features like better searching functions than
             Facebook. You can select multiple dates and find the events of the
             days that you are available. Adding the event to Google Calendar is
-            also another thing to improve your experience. Of course, this web
-            app is not complete and has a lot of potential to be improved like
-            having a chatbox to connect with other people to socialize and meet
-            new people with the same interest of events as you, so any feature
-            requests are welcome.
+            also another thing to improve your experience. You can also think of
+            this like Eventbrite.com, but you don't have to manually create
+            events. You are at ease of promoting your events.. Of course, this
+            web app is not complete and has a lot of potential to be improved
+            like having a chatbox to connect with other people to socialize and
+            meet new people with the same interest of events as you, so any
+            feature requests are welcome.
           </p>
         </v-expansion-panel-content>
       </v-expansion-panel>

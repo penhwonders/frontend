@@ -112,7 +112,7 @@
 
       <template v-slot:append>
         <div class="ma-3">
-          <v-chip color="primary"> @penhwonders </v-chip>
+          <v-chip color="secondary"> @penhwonders </v-chip>
           <v-btn
             href="https://www.instagram.com/penhwonders/"
             target="_blank"

@@ -65,8 +65,15 @@
         <span class="text-subtitle-2">
           Please report to us! <br />
           Email: support@penhwonders.com <br />
-          FB: <a href="#facebook" class="socialmedia">Penhwonders</a> <br />
-          IG: <a href="#Instagram" class="socialmedia">Penhwonders</a>
+          FB:
+          <a href="https://www.instagram.com/penhwonders/" target="_blank"
+            >Penhwonders</a
+          >
+          <br />
+          IG:
+          <a href="https://web.facebook.com/penhwonders" target="_blank"
+            >Penhwonders</a
+          >
         </span>
       </v-card-text>
     </v-card>
@@ -134,7 +141,4 @@ export default {
 </script>
 
 <style>
-.socialmedia {
-  text-decoration: none;
-}
 </style>
