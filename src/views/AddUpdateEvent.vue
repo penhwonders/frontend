@@ -97,10 +97,11 @@ export default {
             console.log(error.response.status);
           } else if (error.request) {
             // The request was made but no response was received
-            console.log(error.request);
+            this.eventAlert(error.request);
+            console.log("Error: "+error.request);
           } else {
             // Something happened in setting up the request that triggered an Error
-            console.log("Error", error.message);
+            console.log("Error: "+error.message);
           }
         });
     },

@@ -7,7 +7,7 @@
       A web application + Automation built by Cambodian college students to help
       your life easier in finding and promoting wonderful events in Phnom Penh!
       The events are automatically updated from a list of registered Facebook
-      pages once everyday at 12:30am by our automated web scraping system.
+      pages once everyday at 12:30am by our automated events-creating system.
     </p>
 
     <!-- Team member section -->
@@ -221,14 +221,9 @@
         <v-expansion-panel-content>
           <v-layout row wrap justify-center>
             <v-chip class="ma-2" v-for="page in pageList" :key="page.name">
-              <div class="d-flex flex-no-wrap align-center">
-                <div>
-                  <v-avatar size="30" class="mr-2">
-                    <img :src="page.profileAvartar" />
-                  </v-avatar>
-                </div>
-                <div class="text-subtitle-2">{{ page.name }}</div>
-              </div>
+              <v-avatar class="mr-2" left>
+                <img :src="page.profileAvartar" /> </v-avatar
+              >{{ page.name }}
             </v-chip>
           </v-layout>
         </v-expansion-panel-content>

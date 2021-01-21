@@ -13,7 +13,7 @@
           v-model="feedback"
           name="Feedback"
           label="Feedback *"
-          :rules="[(v) => !!v || 'Please fill in the feedback']"
+          :rules="[(v) => v.length >= 100 || 'Feedback must be at least 100 characters']"
           outlined
         ></v-textarea>
         <v-textarea
