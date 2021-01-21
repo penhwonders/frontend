@@ -221,8 +221,7 @@
         <v-expansion-panel-content>
           <v-layout row wrap justify-center>
             <v-chip class="ma-2" v-for="page in pageList" :key="page.name">
-              <v-avatar class="mr-2" left>
-                <img :src="page.profileAvartar" /> </v-avatar
+              <v-avatar left> <img :src="page.profileAvartar" /> </v-avatar
               >{{ page.name }}
             </v-chip>
           </v-layout>
