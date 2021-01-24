@@ -8,7 +8,7 @@
       <v-card max-width="400px" dark color="#3b839c" class="ma-2">
         <v-card-title>PAV MUNYOUDOUM<br />001 801 735 </v-card-title>
 
-        <v-avatar class="ma-3" size="120" tile>
+        <v-avatar class="ma-3" size="180" tile>
           <v-img src="../assets/aba bank.jpg"></v-img>
         </v-avatar>
       </v-card>
@@ -58,11 +58,17 @@
     </v-layout>
     <!-- Supporter list -->
     <p class="text-h4 pt-5">Our Supporters</p>
+    <v-chip pill class="ma-2">
+      <v-avatar left
+        ><v-icon color="primary">mdi-account-circle</v-icon></v-avatar
+      >
+      HENG KEVIN $5
+    </v-chip>
     <v-chip pill>
       <v-avatar left
         ><v-icon color="primary">mdi-account-circle</v-icon></v-avatar
       >
-      Your name can be next!
+      Please support us!
     </v-chip>
   </v-main>
 </template>
