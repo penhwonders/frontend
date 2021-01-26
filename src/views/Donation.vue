@@ -39,7 +39,7 @@
         <v-card-text class="background text-body-1 white--text">
           - Support our work <br />
           - Get your name on our page<br />
-          X
+          ------------
         </v-card-text>
       </v-card>
       <v-card width="300" class="ma-2 rounded-lg" color="primary" elevation="1">
@@ -58,11 +58,18 @@
     </v-layout>
     <!-- Supporter list -->
     <p class="text-h4 pt-5">Our Supporters</p>
-    <v-chip pill class="ma-2">
+    <v-chip
+      v-for="donation in donations"
+      :key="donation.name"
+      :href="donation.facebookLink !== null ? donation.facebookLink : false"
+      target="_blank"
+      pill
+      class="ma-2"
+    >
       <v-avatar left
         ><v-icon color="primary">mdi-account-circle</v-icon></v-avatar
       >
-      HENG KEVIN $5
+      {{ donation.name + " " + donation.amount }}
     </v-chip>
     <v-chip pill>
       <v-avatar left
@@ -74,11 +81,14 @@
 </template>
 
 <script>
+import donationData from "../jsonData/donationData.json";
+
 export default {
   name: "Donation",
   data() {
     return {
       money: 0,
+      donations: donationData,
     };
   },
 };

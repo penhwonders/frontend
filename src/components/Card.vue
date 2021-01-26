@@ -11,7 +11,7 @@
       <v-img id="err_img" src="../assets/error image.jpg"></v-img>
     </div>
 
-    <v-card-title>{{
+    <v-card-title class="card-text">{{
       event.title.length >= 73 ? event.title.slice(0, 70) + "..." : event.title
     }}</v-card-title>
 
@@ -67,6 +67,10 @@ export default {
   right: 0;
 }
 
+.card-text {
+  word-break: normal;
+}
+
 #card {
   height: 450px;
 }
@@ -81,5 +85,4 @@ export default {
     max-height: 50%;
   }
 }
-
 </style>
