@@ -86,7 +86,6 @@ import DatePicker from "../components/DatePicker";
 import SelectCategory from "../components/SelectCategory";
 import Search from "../components/Search";
 import axios from "axios";
-import sampleApiData from "../jsonData/sampleApiData.json";
 
 export default {
   name: "Home",
@@ -136,7 +135,6 @@ export default {
       .then((response) => (this.ConstantEvents = response.data))
       .catch(() => {
         this.isError = true;
-        this.ConstantEvents = sampleApiData;
       });
   },
   components: { Card, DatePicker, SelectCategory, Search },

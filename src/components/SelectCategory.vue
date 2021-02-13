@@ -22,7 +22,7 @@ export default {
       "Causes",
       "Comedy",
       "Crafts",
-      "Dances",
+      "Dance",
       "Drinks",
       "Education",
       "Entertainment",

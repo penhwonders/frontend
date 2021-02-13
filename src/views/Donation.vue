@@ -1,6 +1,6 @@
 <template>
   <v-main class="text-center pa-5">
-    <p class="text-h3">Support us!</p>
+    <p class="text-h3">Fund our project!</p>
 
     <v-layout justify-center>
       <!-- aba card -->
@@ -13,13 +13,12 @@
         </v-avatar>
       </v-card>
     </v-layout>
-    <p class="text-subtitle-1">
-      Why you should donate: <br />
-      - We have devoted our time to develop this app for free<br />
-      - We try to keep away from advertisement<br />
-      - You have more convenience in finding events in Phnom Penh<br />
-      - We help your events' traffic grows <br />
-      - You will help our domain/server costs
+    <p class="text-subtitle-1 mt-2">
+      We have worked tirelessly to develop the website while being on school and
+      internship full time. We hope that you will like and enjoy exploring these
+      events, and also have your business's events on the website. Therefore, we
+      would really appreciate if you can help us in financial support for
+      development, domain, server, and maintenance costs. Thank you very much!
     </p>
     <p class="text-h3">Benefits</p>
     <!-- Donations money cards -->
@@ -46,7 +45,7 @@
         <v-card-title
           class="justify-center white--text text-h2 font-weight-medium ma-15"
         >
-          $15+
+          $10+
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text class="background text-body-1 white--text">
@@ -81,14 +80,23 @@
 </template>
 
 <script>
-import donationData from "../jsonData/donationData.json";
-
 export default {
   name: "Donation",
   data() {
     return {
       money: 0,
-      donations: donationData,
+      donations: [
+        {
+          name: "HENG KEVIN",
+          amount: "$5",
+          facebookLink: "https://www.facebook.com/heng.khevin",
+        },
+        {
+          name: "TENG SEAVPOR",
+          amount: "$20",
+          facebookLink: "https://www.facebook.com/tengseavpor",
+        },
+      ],
     };
   },
 };
