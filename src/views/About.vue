@@ -102,11 +102,7 @@
       elevation="15"
       max-width="280px"
     >
-      <v-img
-        height="280px"
-        width="280px"
-        src="https://scontent.fpnh10-1.fna.fbcdn.net/v/t31.0-8/30051572_2220357591313909_4641579719232818028_o.jpg?_nc_cat=102&ccb=2&_nc_sid=174925&_nc_ohc=XGTCjqqj5kgAX8rMWeH&_nc_ht=scontent.fpnh10-1.fna&oh=303743e98923328c1af180f59afca2d1&oe=602A30BB"
-      ></v-img>
+      <v-img height="280px" width="280px" src="../assets/bogdan.jpg"></v-img>
       <v-card-title primary-title class="justify-center">
         Bogdan Vorozhtsov
         <br />
