@@ -64,7 +64,7 @@
         <span class="headline">Technical issue!</span><br />
         <span class="text-subtitle-2">
           Please report to us! <br />
-          Email: support@penhwonders.com <br />
+          Email: munyoudoum@gmail.com <br />
           FB:
           <a href="https://www.instagram.com/penhwonders/" target="_blank"
             >Penhwonders</a
@@ -141,5 +141,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
