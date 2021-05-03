@@ -7,6 +7,7 @@ import About from "../views/About";
 import Feedback from "../views/Feedback";
 import AddUpdateEvent from "../views/AddUpdateEvent";
 import Donation from "../views/Donation";
+import Policy from "../views/Policy";
 
 vue.use(VueRouter);
 
@@ -36,6 +37,11 @@ const routes = [
     path: "/Donation",
     name: "Donation",
     component: Donation,
+  },
+  {
+    path: "/Policy",
+    name: "Policy",
+    component: Policy,
   },
 ];
 

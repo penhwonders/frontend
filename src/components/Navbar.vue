@@ -26,7 +26,9 @@
       </v-app-bar-nav-icon>
 
       <v-toolbar-title class="primary--text" caption>
-        Penhwonders
+        <router-link style="text-decoration: none; color: inherit;" to="/"
+          >Penhwonders</router-link
+        >
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -112,29 +114,33 @@
 
       <template v-slot:append>
         <div class="ma-3">
-          <v-chip color="secondary"> @penhwonders </v-chip>
-          <v-btn
-            href="https://www.instagram.com/penhwonders/"
-            target="_blank"
-            icon
-            dark
-            class="mx-2"
-            ><v-icon large class="icon">mdi-instagram</v-icon>
-          </v-btn>
+          <div>
+            <v-chip color="secondary"> @penhwonders </v-chip>
+            <v-btn
+              href="https://www.instagram.com/penhwonders/"
+              target="_blank"
+              icon
+              dark
+              class="mx-2"
+              ><v-icon large class="icon">mdi-instagram</v-icon>
+            </v-btn>
 
-          <v-btn
-            icon
-            dark
-            href="https://web.facebook.com/penhwonders"
-            target="_blank"
-            ><v-icon large class="icon">mdi-facebook</v-icon></v-btn
-          >
+            <v-btn
+              icon
+              dark
+              href="https://web.facebook.com/penhwonders"
+              target="_blank"
+              ><v-icon large class="icon">mdi-facebook</v-icon></v-btn
+            >
+          </div>
+          <div class="text-center">
+            <router-link to="/Policy">Our policy</router-link>
+          </div>
         </div>
       </template>
     </v-navigation-drawer>
   </v-card>
 </template>
-
 
 <script>
 export default {
