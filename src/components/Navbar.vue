@@ -26,7 +26,7 @@
       </v-app-bar-nav-icon>
 
       <v-toolbar-title class="primary--text" caption>
-        <router-link style="text-decoration: none; color: inherit;" to="/"
+        <router-link style="text-decoration: none; color: inherit" to="/"
           >Penhwonders</router-link
         >
       </v-toolbar-title>

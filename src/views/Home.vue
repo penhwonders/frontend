@@ -131,7 +131,7 @@ export default {
   },
   async created() {
     await axios
-      .get("https://r3cb95wvli.execute-api.ap-southeast-1.amazonaws.com/dev")
+      .get("https://v8uk2bk42a.execute-api.ap-southeast-1.amazonaws.com/dev/")
       .then((response) => (this.ConstantEvents = response.data))
       .catch(() => {
         this.isError = true;

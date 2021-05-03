@@ -1,6 +1,6 @@
 <template>
-  <v-container class="black--text">
-    <h2 style="text-align: center;"><b>PRIVACY POLICY</b></h2>
+  <v-container>
+    <h2 style="text-align: center"><b>PRIVACY POLICY</b></h2>
     <p>Effective date: 2021-04-21</p>
     <p>1. <b>Introduction</b></p>
     <p>Welcome to <b> Penhwonders</b>.</p>
@@ -557,7 +557,7 @@
       If you have any questions about this Privacy Policy, please contact us by
       email: <b>contact@penhwonders.com</b>.
     </p>
-    <p style="margin-top: 5em; font-size: 0.7em;">
+    <p style="margin-top: 5em; font-size: 0.7em">
       This
       <a href="https://policymaker.io/privacy-policy/">Privacy Policy</a> was
       created for <b>penhwonders.com</b> by
