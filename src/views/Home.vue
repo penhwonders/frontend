@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container v-if="ConstantEvents">
     <Search
       v-if="$store.state.searchType == 'search'"
       v-on:SearchToHome="
@@ -85,18 +85,29 @@ import Card from "../components/Card";
 import DatePicker from "../components/DatePicker";
 import SelectCategory from "../components/SelectCategory";
 import Search from "../components/Search";
-import axios from "axios";
+// import axios from "axios";
 
 export default {
   name: "Home",
   data: () => ({
-    ConstantEvents: [],
+    // ConstantEvents: null,
     selectedCategories: [],
     selectedDates: [],
     search: "",
     isError: false,
   }),
+  created() {
+    // await axios
+    //   .get("https://v8uk2bk42a.execute-api.ap-southeast-1.amazonaws.com/dev/")
+    //   .then((response) => (this.ConstantEvents = response.data))
+    //   .catch(() => {
+    //     this.isError = true;
+    //   });
+  },
   computed: {
+    ConstantEvents() {
+      return this.$store.state.allEvents;
+    },
     filteredEvents() {
       if (this.search) {
         return this.ConstantEvents.filter(
@@ -129,14 +140,7 @@ export default {
       return date.getTime() >= min.getTime() && date.getTime() <= max.getTime();
     },
   },
-  async created() {
-    await axios
-      .get("https://v8uk2bk42a.execute-api.ap-southeast-1.amazonaws.com/dev/")
-      .then((response) => (this.ConstantEvents = response.data))
-      .catch(() => {
-        this.isError = true;
-      });
-  },
+
   components: { Card, DatePicker, SelectCategory, Search },
 };
 </script>

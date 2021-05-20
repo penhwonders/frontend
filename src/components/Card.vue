@@ -29,6 +29,7 @@
 
     <v-card-actions class="card-actions">
       <v-spacer></v-spacer>
+      <PopupShare :shareData="shareData" />
       <PopupCard :event="event" />
     </v-card-actions>
   </v-card>
@@ -36,6 +37,7 @@
 
 <script>
 import PopupCard from "./PopupCard";
+import PopupShare from "./PopupShare";
 
 export default {
   name: "Card",
@@ -52,7 +54,19 @@ export default {
       this.isLoaded = true;
     },
   },
-  components: { PopupCard },
+  computed: {
+    shareData() {
+      const url = "https://www.penhwonders.com/event/" + this.event._id;
+      const title = this.event.title;
+      const description = this.event.description.slice(0, 70) + "...";
+      const twitterUser = "Penhwonders";
+      return { url, title, description, twitterUser };
+    },
+  },
+  created() {
+    console.log(this.event._id);
+  },
+  components: { PopupCard, PopupShare },
 };
 </script>
 

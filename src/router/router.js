@@ -8,6 +8,7 @@ import Feedback from "../views/Feedback";
 import AddUpdateEvent from "../views/AddUpdateEvent";
 import Donation from "../views/Donation";
 import Policy from "../views/Policy";
+import Event from "../views/Event";
 
 vue.use(VueRouter);
 
@@ -42,6 +43,10 @@ const routes = [
     path: "/Policy",
     name: "Policy",
     component: Policy,
+  },
+  {
+    path: "/event/:id",
+    component: Event,
   },
 ];
 

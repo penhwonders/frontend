@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import Navbar from "./components/Navbar";
 
 export default {
@@ -16,6 +17,19 @@ export default {
     return {
       categorySelect: "",
     };
+  },
+  // async beforeCreate() {},
+  async created() {
+    const allEvents = await axios
+      .get("https://v8uk2bk42a.execute-api.ap-southeast-1.amazonaws.com/dev/")
+      .then((response) => response.data)
+      .catch((err) => {
+        console.log(err);
+      });
+    this.$store.commit("updateAllEvents", allEvents);
+    console.log("====================================");
+    console.log("called");
+    console.log("====================================");
   },
   components: { Navbar },
 };
