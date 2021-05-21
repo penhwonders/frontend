@@ -105,10 +105,25 @@ export default {
       )[0];
     },
   },
-
   metaInfo() {
     return {
-      meta: [],
+      meta: [
+        // Twitter Card
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:title", content: "Penhwonder" },
+        {
+          name: "twitter:description",
+          content: "Come and check out this event!!!",
+        },
+        // Facebook OpenGraph
+        { property: "og:title", content: "Penhwonder" },
+        { property: "og:site_name", content: "penhwonder" },
+        { property: "og:type", content: "website" },
+        {
+          property: "og:description",
+          content: "Come and check out this event!!!",
+        },
+      ],
     };
   },
 };

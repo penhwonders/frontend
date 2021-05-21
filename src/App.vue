@@ -27,9 +27,6 @@ export default {
         console.log(err);
       });
     this.$store.commit("updateAllEvents", allEvents);
-    console.log("====================================");
-    console.log("called");
-    console.log("====================================");
   },
   components: { Navbar },
 };

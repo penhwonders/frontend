@@ -8,7 +8,7 @@
   >
     <v-img id="image" v-bind:src="event.image" @load="onImgLoad"></v-img>
     <div v-if="!isLoaded">
-      <v-img id="err_img" src="../assets/error image.jpg"></v-img>
+      <v-img id="err_img" src="../assets/error_image.jpg"></v-img>
     </div>
 
     <v-card-title class="card-text">{{
@@ -56,11 +56,11 @@ export default {
   },
   computed: {
     shareData() {
-      const url = "https://www.penhwonders.com/event/" + this.event._id;
+      const url = "https://penhwonders.com/event/" + this.event._id;
       const title = this.event.title;
       const description = this.event.description.slice(0, 70) + "...";
-      const twitterUser = "Penhwonders";
-      return { url, title, description, twitterUser };
+      const hosts = this.event.hosts;
+      return { url, title, description, hosts };
     },
   },
   created() {

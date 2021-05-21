@@ -12,18 +12,23 @@
       </v-btn>
     </template>
 
-    <v-card class="pa-10">
+    <v-card class="pa-5">
       <ShareNetwork
         class="share-button"
         v-for="network in networks"
         :key="network.network"
         :network="network.network"
         :style="{ backgroundColor: network.color }"
-        :url="shareData.url"
-        :title="shareData.title"
+        :url="shareData.url + '\n'"
+        :title="
+          shareData.title +
+            ' hosted by ' +
+            shareData.hosts.join(', ') +
+            '\nview the event now on Penhwonder'
+        "
         :description="shareData.description"
-        :twitter-user="shareData.twitterUser"
-        :qoute="shareData.title"
+        :quote="qoute"
+        hashtags="penhwonders,event"
       >
         <v-icon large class="share-icon">{{ network.icon }}</v-icon>
         <span class="share-text">Share on {{ network.name }}</span>
@@ -37,6 +42,16 @@ export default {
   name: "PopupShare",
   props: {
     shareData: Object,
+  },
+  computed: {
+    qoute() {
+      const data = this.shareData;
+
+      return `${data.title} \nhosted by ${data.hosts.join(
+        ", "
+      )} \nview the event now on Penhwonder
+        `;
+    },
   },
   data() {
     return {
@@ -53,6 +68,12 @@ export default {
           name: "Twitter",
           icon: "mdi-twitter",
           color: "#1da1f2",
+        },
+        {
+          network: "telegram",
+          name: "Telegram",
+          icon: "mdi-telegram",
+          color: "#0088cc",
         },
       ],
     };
