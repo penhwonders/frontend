@@ -94,7 +94,6 @@ export default {
     selectedCategories: [],
     selectedDates: [],
     search: "",
-    isError: false,
   }),
   created() {
     // await axios
@@ -105,6 +104,9 @@ export default {
     //   });
   },
   computed: {
+    isError() {
+      return this.$store.state.isError;
+    },
     ConstantEvents() {
       return this.$store.state.allEvents;
     },

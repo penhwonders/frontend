@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     allEvents: [],
     searchType: "search",
+    isError: false
   },
   getters: {
     getEventById: (state) => (id) => {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     updateSearchType: function(state, newType) {
       state.searchType = newType;
     },
+    updateIsError: (state, err) => {
+      state.isError = err
+    }
   },
   actions: {
     updateSearchType: function({ commit }, newType) {

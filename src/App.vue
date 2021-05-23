@@ -23,8 +23,9 @@ export default {
     const allEvents = await axios
       .get("https://v8uk2bk42a.execute-api.ap-southeast-1.amazonaws.com/dev/")
       .then((response) => response.data)
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        this.$store.commit("updateIsError", true);
+        return [];
       });
     this.$store.commit("updateAllEvents", allEvents);
   },

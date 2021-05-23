@@ -63,9 +63,7 @@ export default {
       return { url, title, description, hosts };
     },
   },
-  created() {
-    console.log(this.event._id);
-  },
+  created() {},
   components: { PopupCard, PopupShare },
 };
 </script>
