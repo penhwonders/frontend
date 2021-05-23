@@ -14,7 +14,7 @@
 
     <v-card class="pa-5">
       <ShareNetwork
-        class="share-button"
+        class="pa-3 my-2 text-decoration-none"
         v-for="network in networks"
         :key="network.network"
         :network="network.network"
@@ -22,16 +22,20 @@
         :url="shareData.url + '\n'"
         :title="
           shareData.title +
-            ' hosted by ' +
-            shareData.hosts.join(', ') +
-            '\nview the event now on Penhwonder'
+          ' hosted by ' +
+          shareData.hosts.join(', ') +
+          '\nview the event now on Penhwonders.com'
         "
         :description="shareData.description"
         :quote="qoute"
         hashtags="penhwonders,event"
       >
-        <v-icon large class="share-icon">{{ network.icon }}</v-icon>
-        <span class="share-text">Share on {{ network.name }}</span>
+        <v-icon large class="share-icon mx-2" color="white">{{
+          network.icon
+        }}</v-icon>
+        <span class="text--body font-weight-bold white--text"
+          >Share on {{ network.name }}</span
+        >
       </ShareNetwork>
     </v-card>
   </v-dialog>
@@ -49,7 +53,7 @@ export default {
 
       return `${data.title} \nhosted by ${data.hosts.join(
         ", "
-      )} \nview the event now on Penhwonder
+      )} \nview the event now on Penhwonders.com
         `;
     },
   },
@@ -80,25 +84,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.share-button {
-  text-align: left;
-  margin: 5px 0;
-  padding: 0.8rem 1rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-.share-icon {
-  margin: 0 0.5rem;
-  widows: 24px;
-}
-
-.share-text {
-  color: #fff;
-  font-weight: 600;
-  font-size: 1em;
-}
-</style>
