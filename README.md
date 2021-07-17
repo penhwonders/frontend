@@ -1,4 +1,4 @@
-# Project name
+# penhwonders/frontend
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
 ![GitHub repo size](https://img.shields.io/github/repo-size/penhwonders/frontend)
@@ -11,34 +11,24 @@ A web application to help you easier in finding and promoting wonderful events i
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
-* You have installed the latest version of `<coding_language/dependency/requirement_1>`
+* [node](https://nodejs.org/en/)
+* [npm](https://www.npmjs.com/)
+* [yarn](https://www.npmjs.com/package/yarn)
 
-## Installing <project_name>
-
-To install <project_name>, follow these steps:
-
-Linux and macOS:
-```
-<install_command>
-```
-
-Windows:
-```
-<install_command>
-```
-## Using <project_name>
-
-To use <project_name>, follow these steps:
+To install node_modules:
 
 ```
-<usage_example>
+yarn install
+```
+## Using penhwonders/frontend
+
+```
+yarn serve
 ```
 
-Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
-
-## Contributing to <project_name>
+## Contributing to penhwonders/frontend
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
-To contribute to <project_name>, follow these steps:
+To contribute to penhwonders/frontend, follow these steps:
 
 1. Fork this repository.
 2. Create a branch: `git checkout -b <branch_name>`.
@@ -52,8 +42,8 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 Thanks to the following people who have contributed to this project:
 
-* [@Nel-sokchhunly](https://github.com/nel-sokchhunly) 🐛
 * [@munyoudoum](https://github.com/munyoudoum) 📖
+* [@Nel-sokchhunly](https://github.com/nel-sokchhunly) 🐛
 
 ## Contact
 
@@ -62,4 +52,4 @@ If you want to contact me you can reach me at <munyoudoum@gmail.com>.
 ## License
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
 
-This project uses the following license: [<license_name>](<link>).
+This project uses the following license: [MIT License](https://opensource.org/licenses/MIT).
