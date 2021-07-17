@@ -24,7 +24,7 @@
           shareData.title +
           ' hosted by ' +
           shareData.hosts.join(', ') +
-          '\nview the event now on Penhwonders.com'
+          '\nview the event now on Penhwonders'
         "
         :description="shareData.description"
         :quote="qoute"
