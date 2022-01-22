@@ -2,14 +2,17 @@
   <v-main class="text-center pa-5">
     <p class="text-h3">Fund our project!</p>
 
-    <v-layout justify-center>
-      <!-- aba card -->
-
-      <v-card max-width="400px" dark color="#3b839c" class="ma-2">
+    <v-layout justify-center wrap>
+      <v-card href="https://link.payway.com.kh/aba?id=718870&code=804543"       target="_blank" max-width="400px" dark color="#3b839c" class="ma-2">
         <v-card-title>PAV MUNYOUDOUM<br />001 801 735</v-card-title>
-
         <v-avatar class="ma-3" size="180" tile>
           <v-img src="../assets/aba bank.jpg"></v-img>
+        </v-avatar>
+      </v-card>
+      <v-card href="https://www.patreon.com/penhwonders"       target="_blank" max-width="400px" dark color="#B14128" class="ma-2">
+        <v-card-title>PAV MUNYOUDOUM<br />Patreon</v-card-title>
+        <v-avatar class="ma-3" size="180" tile>
+          <v-img src="../assets/patreon.png"></v-img>
         </v-avatar>
       </v-card>
     </v-layout>
