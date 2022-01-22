@@ -6,7 +6,7 @@
       <!-- aba card -->
 
       <v-card max-width="400px" dark color="#3b839c" class="ma-2">
-        <v-card-title>PAV MUNYOUDOUM<br />001 801 735 </v-card-title>
+        <v-card-title>PAV MUNYOUDOUM<br />001 801 735</v-card-title>
 
         <v-avatar class="ma-3" size="180" tile>
           <v-img src="../assets/aba bank.jpg"></v-img>
@@ -15,7 +15,7 @@
     </v-layout>
     <p class="text-subtitle-1 mt-2">
       We have worked tirelessly to develop the website while being on school and
-      internship full time. We hope that you will like and enjoy exploring these
+      work full time. We hope that you will like and enjoy exploring these
       events, and also have your business's events on the website. Therefore, we
       would really appreciate if you can help us in financial support for
       development, domain, server, and maintenance costs. Thank you very much!
@@ -32,7 +32,7 @@
         <v-card-title
           class="justify-center white--text text-h2 font-weight-medium ma-15"
         >
-          $5+
+          $Any
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text class="background text-body-1 white--text">
@@ -45,7 +45,7 @@
         <v-card-title
           class="justify-center white--text text-h2 font-weight-medium ma-15"
         >
-          $10+
+          $5+
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text class="background text-body-1 white--text">
@@ -84,17 +84,61 @@ export default {
   name: "Donation",
   data() {
     return {
-      money: 0,
       donations: [
         {
-          name: "HENG KEVIN",
+          name: "SEAVPOR TENG",
+          amount: "$20",
+          facebookLink: "https://www.facebook.com/tengseavpor",
+        },
+        {
+          name: "KEVIN HENG",
           amount: "$5",
           facebookLink: "https://www.facebook.com/heng.khevin",
         },
         {
-          name: "TENG SEAVPOR",
-          amount: "$20",
-          facebookLink: "https://www.facebook.com/tengseavpor",
+          name: "SOVANNRATANA OUK",
+          amount: "$3.98",
+          facebookLink: "https://www.facebook.com/seam.dara.121",
+        },
+        {
+          name: "ZANITH TEK",
+          amount: "$2.68",
+          facebookLink: "https://www.facebook.com/zanithtek",
+        },
+        {
+          name: "SOKHENG KAING",
+          amount: "$2.02",
+          facebookLink: "https://www.facebook.com/sokheng.kaing",
+        },
+        {
+          name: "VENMEY NARETHMARCH",
+          amount: "$1.5",
+          facebookLink: "https://www.facebook.com/meyven.narethmarch.1",
+        },
+        {
+          name: "TECHUY LAV",
+          amount: "$1",
+          facebookLink: "",
+        },
+        {
+          name: "MANETH PAK",
+          amount: "$0.99",
+          facebookLink: "https://www.facebook.com/nth.much.nth.special",
+        },
+        {
+          name: "VIREAKYUTH NEAK",
+          amount: "$0.3",
+          facebookLink: "https://www.facebook.com/yuth.neak.9",
+        },
+        {
+          name: "KEOMONNYRATANAK PHOK",
+          amount: "$0.25",
+          facebookLink: "https://www.facebook.com/HaxorHunter",
+        },
+        {
+          name: "VATANA SAMBATH",
+          amount: "$0.2",
+          facebookLink: "https://www.facebook.com/zack592",
         },
       ],
     };
