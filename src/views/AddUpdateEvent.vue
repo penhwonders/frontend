@@ -9,7 +9,7 @@
           placeholder="https://www.facebook.com/events/1234567890/"
           persistent-hint
           outlined
-          label="Facebook event link"
+          label="Facebook event link(Obsolete)"
         ></v-text-field>
         <v-select
           :items="items"
@@ -23,9 +23,9 @@
           color="background primary--text"
           large
           elevation="5"
-          :disabled="!valid"
+          :disabled="true"
           @click="value === 'Add' ? add() : update()"
-          >Submit</v-btn
+          >Submit(Obsolete)</v-btn
         >
       </v-form>
       <AlertNotification
