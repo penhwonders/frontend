@@ -6,14 +6,23 @@
     color="bg"
     elevation="15"
   >
-    <v-img id="image" v-bind:src="event.image" @load="onImgLoad"></v-img>
+    <v-img
+      id="image"
+      :src="event.image"
+      @load="onImgLoad"
+    />
     <div v-if="!isLoaded">
-      <v-img id="err_img" src="../assets/error_image.jpg"></v-img>
+      <v-img
+        id="err_img"
+        src="../assets/error_image.jpg"
+      />
     </div>
 
-    <v-card-title class="card-text">{{
-      event.title.length >= 73 ? event.title.slice(0, 70) + "..." : event.title
-    }}</v-card-title>
+    <v-card-title class="card-text">
+      {{
+        event.title.length >= 73 ? event.title.slice(0, 70) + "..." : event.title
+      }}
+    </v-card-title>
 
     <v-card-subtitle class="pb-0">
       <b><v-icon>mdi-account-multiple</v-icon></b>
@@ -21,15 +30,15 @@
         event.hosts.length > 2
           ? event.hosts.slice(0, 2).join(", ") + ", ..."
           : event.hosts.join(", ")
-      }}<br />
-      <b><v-icon>mdi-clock</v-icon></b> {{ event.time }}<br />
-      <b><v-icon>mdi-map-marker</v-icon></b> {{ event.location }}<br />
-      <b><v-icon>mdi-layers</v-icon></b> {{ event.categories.join(", ") }}<br />
+      }}<br>
+      <b><v-icon>mdi-clock</v-icon></b> {{ event.time }}<br>
+      <b><v-icon>mdi-map-marker</v-icon></b> {{ event.location }}<br>
+      <b><v-icon>mdi-layers</v-icon></b> {{ event.categories.join(", ") }}<br>
     </v-card-subtitle>
 
     <v-card-actions class="card-actions">
-      <v-spacer></v-spacer>
-      <PopupShare :shareData="shareData" />
+      <v-spacer />
+      <PopupShare :share-data="shareData" />
       <PopupCard :event="event" />
     </v-card-actions>
   </v-card>

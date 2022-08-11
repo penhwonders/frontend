@@ -21,11 +21,11 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
     "@nuxtjs/vuetify": "^1.12.1",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
-    "babel-eslint": "^10.1.0",
     "eslint": "^8.21.0",
     "eslint-plugin-vue": "^9.3.0",
     "vue-cli-plugin-vuetify": "~2.4.1",
@@ -42,9 +42,11 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
   },
   "browserslist": [
     "> 1%",

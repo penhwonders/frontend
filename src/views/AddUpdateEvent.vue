@@ -1,7 +1,10 @@
 <template>
   <v-main class="text-center pa-2">
     <v-container>
-      <v-form v-model="valid" ref="form">
+      <v-form
+        v-model="valid"
+        ref="form"
+      >
         <v-text-field
           v-model="link"
           type="text"
@@ -10,7 +13,7 @@
           persistent-hint
           outlined
           label="Facebook event link(Obsolete)"
-        ></v-text-field>
+        />
         <v-select
           :items="items"
           v-model="value"
@@ -18,21 +21,22 @@
           :rules="[(v) => !!v || 'It is not that hard to decide ^_^']"
           label="Type"
           menu-props="offset-y"
-        ></v-select>
+        />
         <v-btn
           color="background primary--text"
           large
           elevation="5"
           :disabled="true"
           @click="value === 'Add' ? add() : update()"
-          >Submit(Obsolete)</v-btn
         >
+          Submit(Obsolete)
+        </v-btn>
       </v-form>
       <AlertNotification
         :event="event"
-        :isNewEvent="isNewEvent"
-        :isFunction="functionCalled"
-        :isFeedback="false"
+        :is-new-event="isNewEvent"
+        :is-function="functionCalled"
+        :is-feedback="false"
         :dialog="dialog"
         @close="dialog = false"
       />

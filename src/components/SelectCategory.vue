@@ -10,8 +10,7 @@
     clearable
     @change="filterEventsByCategories"
     menu-props="offset-y"
-  >
-  </v-select>
+  />
 </template>
 
 <script>

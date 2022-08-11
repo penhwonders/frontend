@@ -11,7 +11,7 @@ Vue.use(VueSocialSharing);
 
 // and then use it in main.js
 Vue.use(VueAnalytics, {
-  id: "",
+  id: "UA-186949747-1",
   router,
 });
 Vue.config.productionTip = false;

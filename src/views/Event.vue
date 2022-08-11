@@ -1,22 +1,29 @@
 <template>
   <div class="parent-wrapper">
-    <div class="event-wrapper" v-if="event">
+    <div
+      class="event-wrapper"
+      v-if="event"
+    >
       <v-card-title>
         {{ event.title }}
       </v-card-title>
 
       <v-card-text style="white-space: pre-line">
-        <v-img width="100%" class="rounded" v-bind:src="event.image"></v-img>
-        <br />
+        <v-img
+          width="100%"
+          class="rounded"
+          :src="event.image"
+        />
+        <br>
         Hosts: <b>{{ event.hosts.join(", ") }}</b>
-        <br />
+        <br>
         Time<b>: {{ event.time }}</b>
-        <br />
+        <br>
         Location<b>: {{ event.location }}</b>
-        <br />
+        <br>
         Categories<b>: {{ event.categories.join(", ") }}</b>
-        <br />
-        Description:<br />
+        <br>
+        Description:<br>
         {{ event.description }}
         <div v-if="event.location != 'Online event' && event.location != ''">
           <iframe
@@ -24,25 +31,27 @@
             height="280px"
             frameborder="0"
             class="mt-2 rounded"
-            v-bind:src="
+            :src="
               'https://www.google.com/maps/embed/v1/place?key=AIzaSyCQMbSQjawwUF2loVgW5NX5HpDp8069-HU&q=' +
                 event.location.replaceAll('&', '%26')
             "
             allowfullscreen
-          >
-          </iframe>
-          <br />
+          />
+          <br>
           <b>Note: Google Maps location here is not always correct </b>
         </div>
       </v-card-text>
-      <v-divider></v-divider>
+      <v-divider />
       <v-card-actions>
         <v-btn
           color="background white--text"
           :href="event.link"
           target="_blank"
         >
-          <span class="pr-1" v-if="!this.$vuetify.breakpoint.xs">facebook</span>
+          <span
+            class="pr-1"
+            v-if="!this.$vuetify.breakpoint.xs"
+          >facebook</span>
           <v-icon>mdi-facebook</v-icon>
         </v-btn>
         <v-btn
@@ -67,9 +76,10 @@
           target="_blank"
           rel="nofollow"
         >
-          <span class="pr-1" v-if="!this.$vuetify.breakpoint.xsOnly"
-            >Calendar</span
-          >
+          <span
+            class="pr-1"
+            v-if="!this.$vuetify.breakpoint.xsOnly"
+          >Calendar</span>
           <v-icon>mdi-calendar</v-icon>
         </v-btn>
         <v-btn
@@ -78,13 +88,21 @@
           target="_blank"
           v-if="event.ticket !== ''"
         >
-          <span class="pr-1" v-if="!this.$vuetify.breakpoint.xs">Ticket</span>
+          <span
+            class="pr-1"
+            v-if="!this.$vuetify.breakpoint.xs"
+          >Ticket</span>
           <v-icon>mdi-ticket</v-icon>
         </v-btn>
-        <v-spacer></v-spacer>
-        <router-link to="/"
-          ><v-btn color="secondary" text> Home </v-btn></router-link
-        >
+        <v-spacer />
+        <router-link to="/">
+          <v-btn
+            color="secondary"
+            text
+          >
+            Home
+          </v-btn>
+        </router-link>
       </v-card-actions>
     </div>
   </div>

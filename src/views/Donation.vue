@@ -1,18 +1,45 @@
 <template>
   <v-main class="text-center pa-5">
-    <p class="text-h3">Fund our project!</p>
+    <p class="text-h3">
+      Fund our project!
+    </p>
 
-    <v-layout justify-center wrap>
-      <v-card href="https://link.payway.com.kh/aba?id=718870&code=804543"       target="_blank" max-width="400px" dark color="#3b839c" class="ma-2">
-        <v-card-title>PAV MUNYOUDOUM<br />001 801 735</v-card-title>
-        <v-avatar class="ma-3" size="180" tile>
-          <v-img src="../assets/aba bank.jpg"></v-img>
+    <v-layout
+      justify-center
+      wrap
+    >
+      <v-card
+        href="https://link.payway.com.kh/aba?id=718870&code=804543"
+        target="_blank"
+        max-width="400px"
+        dark
+        color="#3b839c"
+        class="ma-2"
+      >
+        <v-card-title>PAV MUNYOUDOUM<br>001 801 735</v-card-title>
+        <v-avatar
+          class="ma-3"
+          size="180"
+          tile
+        >
+          <v-img src="../assets/aba bank.jpg" />
         </v-avatar>
       </v-card>
-      <v-card href="https://www.patreon.com/penhwonders"       target="_blank" max-width="400px" dark color="#B14128" class="ma-2">
-        <v-card-title>PAV MUNYOUDOUM<br />Patreon</v-card-title>
-        <v-avatar class="ma-3" size="180" tile>
-          <v-img src="../assets/patreon.png"></v-img>
+      <v-card
+        href="https://www.patreon.com/penhwonders"
+        target="_blank"
+        max-width="400px"
+        dark
+        color="#B14128"
+        class="ma-2"
+      >
+        <v-card-title>PAV MUNYOUDOUM<br>Patreon</v-card-title>
+        <v-avatar
+          class="ma-3"
+          size="180"
+          tile
+        >
+          <v-img src="../assets/patreon.png" />
         </v-avatar>
       </v-card>
     </v-layout>
@@ -23,9 +50,15 @@
       would really appreciate if you can help us in financial support for
       development, domain, server, and maintenance costs. Thank you very much!
     </p>
-    <p class="text-h3">Benefits</p>
+    <p class="text-h3">
+      Benefits
+    </p>
     <!-- Donations money cards -->
-    <v-layout row wrap justify-center>
+    <v-layout
+      row
+      wrap
+      justify-center
+    >
       <v-card
         width="300"
         elevation="15"
@@ -37,29 +70,36 @@
         >
           $Any
         </v-card-title>
-        <v-divider></v-divider>
+        <v-divider />
         <v-card-text class="background text-body-1 white--text">
-          - Support our work <br />
-          - Get your name on our page<br />
+          - Support our work <br>
+          - Get your name on our page<br>
           ------------
         </v-card-text>
       </v-card>
-      <v-card width="300" class="ma-2 rounded-lg" color="primary" elevation="1">
+      <v-card
+        width="300"
+        class="ma-2 rounded-lg"
+        color="primary"
+        elevation="1"
+      >
         <v-card-title
           class="justify-center white--text text-h2 font-weight-medium ma-15"
         >
           $5+
         </v-card-title>
-        <v-divider></v-divider>
+        <v-divider />
         <v-card-text class="background text-body-1 white--text">
-          - Support our work <br />
-          - Get your name on our page <br />
+          - Support our work <br>
+          - Get your name on our page <br>
           - Get a glowing effect on 1 event
         </v-card-text>
       </v-card>
     </v-layout>
     <!-- Supporter list -->
-    <p class="text-h4 pt-5">Our Supporters</p>
+    <p class="text-h4 pt-5">
+      Our Supporters
+    </p>
     <v-chip
       v-for="donation in donations"
       :key="donation.name"
@@ -68,15 +108,19 @@
       pill
       class="ma-2"
     >
-      <v-avatar left
-        ><v-icon color="primary">mdi-account-circle</v-icon></v-avatar
-      >
+      <v-avatar left>
+        <v-icon color="primary">
+          mdi-account-circle
+        </v-icon>
+      </v-avatar>
       {{ donation.name + " " + donation.amount }}
     </v-chip>
     <v-chip pill>
-      <v-avatar left
-        ><v-icon color="primary">mdi-account-circle</v-icon></v-avatar
-      >
+      <v-avatar left>
+        <v-icon color="primary">
+          mdi-account-circle
+        </v-icon>
+      </v-avatar>
       Please support us!
     </v-chip>
   </v-main>

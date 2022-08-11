@@ -2,7 +2,7 @@
   <v-container v-if="ConstantEvents">
     <Search
       v-if="$store.state.searchType == 'search'"
-      v-on:SearchToHome="
+      @SearchToHome="
         (searchData) => {
           search = searchData;
           selectedDates = [];
@@ -12,7 +12,7 @@
     />
     <DatePicker
       v-if="$store.state.searchType == 'calendar'"
-      v-on:DateToHome="
+      @DateToHome="
         (dates) => {
           selectedDates = dates;
           selectedCategories = [];
@@ -22,7 +22,7 @@
     />
     <SelectCategory
       v-if="$store.state.searchType == 'category'"
-      v-on:CategoryToHome="
+      @CategoryToHome="
         (categories) => {
           selectedCategories = categories;
           selectedDates = [];
@@ -30,7 +30,11 @@
         }
       "
     />
-    <v-layout row wrap justify-start>
+    <v-layout
+      row
+      wrap
+      justify-start
+    >
       <v-flex
         xs12
         sm6
@@ -49,31 +53,41 @@
       justify-start
       v-if="ConstantEvents.length === 0 && isError === false"
     >
-      <v-flex xs12 sm6 md4 lg3 xl3 v-for="n in 8" :key="n">
+      <v-flex
+        xs12
+        sm6
+        md4
+        lg3
+        xl3
+        v-for="n in 8"
+        :key="n"
+      >
         <v-skeleton-loader
           class="mx-2 mb-3 card-outter"
           max-width="450px"
           type="card, article, actions"
-        ></v-skeleton-loader>
+        />
       </v-flex>
     </v-layout>
     <v-card v-else-if="isError === true">
       <v-card-text class="text-center">
-        <img src="https://img.icons8.com/color/48/000000/error--v3.png" />
-        <br />
-        <span class="headline">Technical issue!</span><br />
+        <img src="https://img.icons8.com/color/48/000000/error--v3.png">
+        <br>
+        <span class="headline">Technical issue!</span><br>
         <span class="text-subtitle-2">
-          Please report to us! <br />
-          Email: munyoudoum@gmail.com <br />
+          Please report to us! <br>
+          Email: munyoudoum@gmail.com <br>
           FB:
-          <a href="https://www.instagram.com/penhwonders/" target="_blank"
-            >Penhwonders</a
-          >
-          <br />
+          <a
+            href="https://www.instagram.com/penhwonders/"
+            target="_blank"
+          >Penhwonders</a>
+          <br>
           IG:
-          <a href="https://web.facebook.com/penhwonders" target="_blank"
-            >Penhwonders</a
-          >
+          <a
+            href="https://web.facebook.com/penhwonders"
+            target="_blank"
+          >Penhwonders</a>
         </span>
       </v-card-text>
     </v-card>

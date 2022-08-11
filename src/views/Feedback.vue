@@ -1,52 +1,56 @@
 <template>
   <v-main class="text-center pa-2">
     <v-container>
-      <form ref="formElement" @submit.prevent="submit">
+      <form
+        ref="formElement"
+        @submit.prevent="submit"
+      >
         <v-select
           v-model="type"
           :items="items"
           name="Feedback Type"
           label="Feedback Type"
           outlined
-        ></v-select>
+        />
         <v-textarea
           v-model="feedback"
           name="Feedback"
           label="Feedback *"
           :rules="[(v) => v.length >= 100 || 'Feedback must be at least 100 characters']"
           outlined
-        ></v-textarea>
+        />
         <v-textarea
           v-model="suggestions"
           outlined
           name="Suggestions"
           label="Suggestions for improvement"
-        ></v-textarea>
+        />
         <v-text-field
           name="Name"
           v-model="name"
           label="Name"
           outlined
-        ></v-text-field>
+        />
         <v-text-field
           name="Email"
           v-model="email"
           label="Email"
           outlined
-        ></v-text-field>
+        />
         <v-btn
           type="submit"
           :disabled="feedback === '' ? true : false"
           large
           color="background primary--text"
           elevation="5"
-          >Submit</v-btn
         >
+          Submit
+        </v-btn>
       </form>
       <AlertNotification
-        :isNewEvent="false"
-        :isFunction="''"
-        :isFeedback="true"
+        :is-new-event="false"
+        :is-function="''"
+        :is-feedback="true"
         :dialog="dialog"
         @close="dialog = false"
       />
