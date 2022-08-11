@@ -10,7 +10,7 @@
 <script>
 import Navbar from "./components/Navbar";
 import {app} from './firebase'
-import { collection, getDocs, getFirestore } from "firebase/firestore"; 
+import { collection, getDocs, getFirestore, query, orderBy } from "firebase/firestore"; 
 
 const db = getFirestore(app);
 
@@ -22,7 +22,7 @@ export default {
     };
   },
   async created() {
-    const querySnapshot = await getDocs(collection(db, "events"));
+    const querySnapshot = await getDocs(query(collection(db, "events"), orderBy("start_time")));
     const allEvents = querySnapshot.docs.map(doc => doc.data())
     if (allEvents.length) {
     this.$store.commit("updateAllEvents", allEvents);
