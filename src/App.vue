@@ -2,7 +2,7 @@
   <v-app id="app">
     <Navbar />
     <v-main>
-      <router-view></router-view>
+      <router-view />
     </v-main>
   </v-app>
 </template>
@@ -25,19 +25,11 @@ export default {
     const querySnapshot = await getDocs(collection(db, "events"));
     const allEvents = querySnapshot.docs.map(doc => doc.data())
     if (allEvents.length) {
-      this.$store.dispatch("updateAllEvents", allEvents);
+    this.$store.commit("updateAllEvents", allEvents);
     } else {
       this.$store.commit("updateIsError", true);
       return []
     }
-    // const allEvents = await axios
-    //   .get("https://v8uk2bk42a.execute-api.ap-southeast-1.amazonaws.com/dev/")
-    //   .then((response) => response.data)
-    //   .catch(() => {
-    //     this.$store.commit("updateIsError", true);
-    //     return [];
-    //   });
-    this.$store.commit("updateAllEvents", allEvents);
   },
   components: { Navbar },
 };
