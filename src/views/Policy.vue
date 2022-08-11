@@ -1,6 +1,8 @@
 <template>
   <v-container>
-    <h2 style="text-align: center"><b>PRIVACY POLICY</b></h2>
+    <h2 style="text-align: center">
+      <b>PRIVACY POLICY</b>
+    </h2>
     <p>Effective date: 2021-04-21</p>
     <p>1. <b>Introduction</b></p>
     <p>Welcome to <b> Penhwonders</b>.</p>
@@ -90,9 +92,7 @@
     <p><b>Usage Data</b></p>
     <p class="text">
       We may also collect information that your browser sends whenever you visit
-      our Service or when you access Service by or through any device (<b
-        >“Usage Data”</b
-      >).
+      our Service or when you access Service by or through any device (<b>“Usage Data”</b>).
     </p>
     <p class="text">
       This Usage Data may include information such as your computer’s Internet
@@ -150,9 +150,7 @@
       registration at place of residence and actual address, telephone number
       (work, mobile), details of documents on education, qualification,
       professional training, employment agreements,
-      <a href="https://policymaker.io/non-disclosure-agreement/"
-        >NDA agreements</a
-      >, information on bonuses and compensation, information on marital status,
+      <a href="https://policymaker.io/non-disclosure-agreement/">NDA agreements</a>, information on bonuses and compensation, information on marital status,
       family members, social security (or other taxpayer identification) number,
       office location and other data.
     </p>
@@ -268,8 +266,7 @@
     </p>
     <p>
       10.
-      <b
-        >Your Data Protection Rights Under General Data Protection Regulation
+      <b>Your Data Protection Rights Under General Data Protection Regulation
         (GDPR)
       </b>
     </p>
@@ -328,10 +325,8 @@
     </p>
     <p>
       11.
-      <b
-        >Your Data Protection Rights under the California Privacy Protection Act
-        (CalOPPA)</b
-      >
+      <b>Your Data Protection Rights under the California Privacy Protection Act
+        (CalOPPA)</b>
     </p>
     <p class="text">
       CalOPPA is the first state law in the nation to require commercial
@@ -370,10 +365,8 @@
     </p>
     <p>
       12.
-      <b
-        >Your Data Protection Rights under the California Consumer Privacy Act
-        (CCPA)</b
-      >
+      <b>Your Data Protection Rights under the California Consumer Privacy Act
+        (CCPA)</b>
     </p>
     <p class="text">
       If you are a California resident, you are entitled to learn what data we
@@ -382,10 +375,8 @@
       ask us:
     </p>
     <p>
-      <b
-        >0.1. What personal information we have about you. If you make this
-        request, we will return to you:</b
-      >
+      <b>0.1. What personal information we have about you. If you make this
+        request, we will return to you:</b>
     </p>
     <p>
       0.0.1. The categories of personal information we have collected about you.
@@ -423,27 +414,23 @@
       information we collected about you in the previous 12 months.
     </p>
     <p>
-      <b
-        >0.2. To delete your personal information. If you make this request, we
+      <b>0.2. To delete your personal information. If you make this request, we
         will delete the personal information we hold about you as of the date of
         your request from our records and direct any service providers to do the
         same. In some cases, deletion may be accomplished through
         de-identification of the information. If you choose to delete your
         personal information, you may not be able to use certain functions that
-        require your personal information to operate.</b
-      >
+        require your personal information to operate.</b>
     </p>
     <p>
-      <b
-        >0.3. To stop selling your personal information. We don’t sell or rent
+      <b>0.3. To stop selling your personal information. We don’t sell or rent
         your personal information to any third parties for any purpose. We do
         not sell your personal information for monetary consideration. However,
         under some circumstances, a transfer of personal information to a third
         party, or within our family of companies, without monetary consideration
         may be considered a “sale” under California law. You are the only owner
         of your Personal Data and can request disclosure or deletion at any
-        time.</b
-      >
+        time.</b>
     </p>
     <p class="text">
       If you submit a request to stop selling your personal information, we will
@@ -513,21 +500,15 @@
       <a href="https://policymaker.io/privacy-policy/">privacy policy</a> has
       been made using <a href="https://policymaker.io/">PolicyMaker.io</a>, a
       free tool that helps create high-quality legal documents. PolicyMaker’s
-      <a href="https://policymaker.io/privacy-policy/"
-        >privacy policy generator</a
-      >
+      <a href="https://policymaker.io/privacy-policy/">privacy policy generator</a>
       is an easy-to-use tool for creating a
-      <a href="https://policymaker.io/blog-privacy-policy/"
-        >privacy policy for blog</a
-      >, website, e-commerce store or mobile app.
+      <a href="https://policymaker.io/blog-privacy-policy/">privacy policy for blog</a>, website, e-commerce store or mobile app.
     </p>
     <p>
       18. <b><b>Children’s Privacy</b></b>
     </p>
     <p class="text">
-      Our Services are not intended for use by children under the age of 18 (<b
-        >“Child”</b
-      >
+      Our Services are not intended for use by children under the age of 18 (<b>“Child”</b>
       or <b>“Children”</b>).
     </p>
     <p class="text">

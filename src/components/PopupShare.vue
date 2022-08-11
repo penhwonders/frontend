@@ -6,8 +6,14 @@
     max-width="600px"
     transition="dialog-transition"
   >
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn class="mx-2" color="background" dark v-bind="attrs" v-on="on">
+    <template #activator="{ on, attrs }">
+      <v-btn
+        class="mx-2"
+        color="background"
+        dark
+        v-bind="attrs"
+        v-on="on"
+      >
         share
       </v-btn>
     </template>
@@ -22,20 +28,24 @@
         :url="shareData.url + '\n'"
         :title="
           shareData.title +
-          ' hosted by ' +
-          shareData.hosts.join(', ') +
-          '\nview the event now on Penhwonders'
+            ' hosted by ' +
+            shareData.hosts.join(', ') +
+            '\nview the event now on Penhwonders'
         "
         :description="shareData.description"
         :quote="qoute"
         hashtags="penhwonders,event"
       >
-        <v-icon large class="share-icon mx-2" color="white">{{
-          network.icon
-        }}</v-icon>
-        <span class="text--body font-weight-bold white--text"
-          >Share on {{ network.name }}</span
+        <v-icon
+          large
+          class="share-icon mx-2"
+          color="white"
         >
+          {{
+            network.icon
+          }}
+        </v-icon>
+        <span class="text--body font-weight-bold white--text">Share on {{ network.name }}</span>
       </ShareNetwork>
     </v-card>
   </v-dialog>

@@ -6,7 +6,7 @@
     offset-y
     min-width="200px"
   >
-    <template v-slot:activator="{ on, attrs }">
+    <template #activator="{ on, attrs }">
       <v-combobox
         v-model="dates"
         multiple
@@ -19,7 +19,7 @@
         append-icon
         readonly
         @input="filterEventsByDates"
-      ></v-combobox>
+      />
     </template>
     <v-date-picker
       elevation="10"
@@ -28,8 +28,7 @@
       multiple
       scrollable
       @click:date="filterEventsByDates"
-    >
-    </v-date-picker>
+    />
   </v-menu>
 </template>
 

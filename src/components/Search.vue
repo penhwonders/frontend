@@ -7,7 +7,7 @@
     clearable
     outlined
     hint="Search by Title, Description, Location"
-  ></v-text-field>
+  />
 </template>
 
 <script>

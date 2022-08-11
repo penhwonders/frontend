@@ -1,15 +1,15 @@
-import Vue from "vue";
-import App from "./App.vue";
-import vuetify from "./plugins/vuetify";
-import router from "./router/router";
-import store from "./plugins/appState";
-import VueAnalytics from "vue-analytics";
-import VueSocialSharing from "vue-social-sharing";
+import Vue from 'vue';
+import VueAnalytics from 'vue-analytics';
+import VueSocialSharing from 'vue-social-sharing';
+import App from './App.vue';
+import vuetify from './plugins/vuetify';
+import router from './router/router';
+import store from './plugins/appState';
 
 // for social sharing
 Vue.use(VueSocialSharing);
 
-//and then use it in main.js
+// and then use it in main.js
 Vue.use(VueAnalytics, {
   id: "UA-186949747-1",
   router,
@@ -21,4 +21,4 @@ new Vue({
   router,
   store,
   render: (h) => h(App),
-}).$mount("#app");
+}).$mount('#app');

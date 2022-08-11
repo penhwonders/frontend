@@ -25,13 +25,19 @@
         <v-icon>mdi-arrow-left</v-icon>
       </v-app-bar-nav-icon>
 
-      <v-toolbar-title class="primary--text" caption>
-        <router-link style="text-decoration: none; color: inherit" to="/"
-          >Penhwonders</router-link
+      <v-toolbar-title
+        class="primary--text"
+        caption
+      >
+        <router-link
+          style="text-decoration: none; color: inherit"
+          to="/"
         >
+          Penhwonders
+        </router-link>
       </v-toolbar-title>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
       <v-btn
         dark
         v-if="$store.state.searchType != 'search'"
@@ -68,38 +74,65 @@
     >
       <v-list>
         <!-- Home button -->
-        <v-list-item
-          ><v-btn to="/" width="100%" color="primary" text
-            >Home</v-btn
-          ></v-list-item
-        >
+        <v-list-item>
+          <v-btn
+            to="/"
+            width="100%"
+            color="primary"
+            text
+          >
+            Home
+          </v-btn>
+        </v-list-item>
         <!-- Add and Update event button -->
-        <v-list-item
-          ><v-btn to="/AddUpdateEvent" width="100%" color="primary" text
-            >Add/Update new events</v-btn
-          ></v-list-item
-        >
+        <v-list-item>
+          <v-btn
+            to="/AddUpdateEvent"
+            width="100%"
+            color="primary"
+            text
+          >
+            Add/Update new events
+          </v-btn>
+        </v-list-item>
         <!-- Feedback button -->
-        <v-list-item
-          ><v-btn to="/Feedback" width="100%" color="primary" text
-            >Feedback</v-btn
-          ></v-list-item
-        >
+        <v-list-item>
+          <v-btn
+            to="/Feedback"
+            width="100%"
+            color="primary"
+            text
+          >
+            Feedback
+          </v-btn>
+        </v-list-item>
         <!-- About button -->
-        <v-list-item
-          ><v-btn to="/About" width="100%" color="primary" text
-            >About</v-btn
-          ></v-list-item
-        >
+        <v-list-item>
+          <v-btn
+            to="/About"
+            width="100%"
+            color="primary"
+            text
+          >
+            About
+          </v-btn>
+        </v-list-item>
         <!-- Donation button -->
         <v-list-item>
-          <v-btn to="/Donation" width="100%" color="primary" text
-            >Support Us<v-icon class="ml-2">mdi-heart</v-icon>
+          <v-btn
+            to="/Donation"
+            width="100%"
+            color="primary"
+            text
+          >
+            Support Us<v-icon class="ml-2">
+              mdi-heart
+            </v-icon>
           </v-btn>
         </v-list-item>
         <!-- Dark mode switch -->
         <v-list-item>
-          <v-spacer></v-spacer>
+          <v-spacer />
           <v-switch
             inset
             dark
@@ -107,22 +140,30 @@
             label="Dark Mode"
             persistent-hint
             @click="saveThemeToLocal"
-          ></v-switch>
-          <v-spacer></v-spacer>
+          />
+          <v-spacer />
         </v-list-item>
       </v-list>
 
-      <template v-slot:append>
+      <template #append>
         <div class="ma-3">
           <div>
-            <v-chip color="secondary"> @penhwonders </v-chip>
+            <v-chip color="secondary">
+              @penhwonders
+            </v-chip>
             <v-btn
               href="https://www.instagram.com/penhwonders/"
               target="_blank"
               icon
               dark
               class="mx-2"
-              ><v-icon large class="icon">mdi-instagram</v-icon>
+            >
+              <v-icon
+                large
+                class="icon"
+              >
+                mdi-instagram
+              </v-icon>
             </v-btn>
 
             <v-btn
@@ -130,11 +171,19 @@
               dark
               href="https://web.facebook.com/penhwonders"
               target="_blank"
-              ><v-icon large class="icon">mdi-facebook</v-icon></v-btn
             >
+              <v-icon
+                large
+                class="icon"
+              >
+                mdi-facebook
+              </v-icon>
+            </v-btn>
           </div>
           <div class="text-center">
-            <router-link to="/Policy">Our policy</router-link>
+            <router-link to="/Policy">
+              Our policy
+            </router-link>
           </div>
         </div>
       </template>

@@ -1,7 +1,10 @@
 <template>
   <v-main class="text-center pa-2">
     <v-container>
-      <v-form v-model="valid" ref="form">
+      <v-form
+        v-model="valid"
+        ref="form"
+      >
         <v-text-field
           v-model="link"
           type="text"
@@ -10,7 +13,7 @@
           persistent-hint
           outlined
           label="Facebook event link(Obsolete)"
-        ></v-text-field>
+        />
         <v-select
           :items="items"
           v-model="value"
@@ -18,21 +21,22 @@
           :rules="[(v) => !!v || 'It is not that hard to decide ^_^']"
           label="Type"
           menu-props="offset-y"
-        ></v-select>
+        />
         <v-btn
           color="background primary--text"
           large
           elevation="5"
           :disabled="true"
           @click="value === 'Add' ? add() : update()"
-          >Submit(Obsolete)</v-btn
         >
+          Submit(Obsolete)
+        </v-btn>
       </v-form>
       <AlertNotification
         :event="event"
-        :isNewEvent="isNewEvent"
-        :isFunction="functionCalled"
-        :isFeedback="false"
+        :is-new-event="isNewEvent"
+        :is-function="functionCalled"
+        :is-feedback="false"
         :dialog="dialog"
         @close="dialog = false"
       />
@@ -42,13 +46,10 @@
 </template>
 
 <script>
-import Axios from "axios";
+// import Axios from "axios";
 import AlertNotification from "../components/AlertNotification";
 import Loading from "../components/Loading";
 
-//api link
-
-let apiUrl = "https://wqh9ckdbre.execute-api.ap-southeast-1.amazonaws.com/dev";
 
 export default {
   name: "AddUpdateEvent",
@@ -74,37 +75,37 @@ export default {
     };
   },
   methods: {
-    async add() {
-      this.functionCalled = "add";
-      this.loading = true;
-      await Axios.post(apiUrl, {
-        link: this.link,
-      })
-        .then((event) => this.eventAlert(event.data))
-        .catch((err) => this.eventAlert(err.data));
-    },
-    async update() {
-      this.functionCalled = "update";
-      this.loading = true;
-      await Axios.put(apiUrl, {
-        link: this.link,
-      })
-        .then((event) => this.eventAlert(event.data))
-        .catch(function (error) {
-          if (error.response) {
-            // Request made and server responded
-            console.log(error.response.data);
-            console.log(error.response.status);
-          } else if (error.request) {
-            // The request was made but no response was received
-            this.eventAlert(error.request);
-            console.log("Error: "+error.request);
-          } else {
-            // Something happened in setting up the request that triggered an Error
-            console.log("Error: "+error.message);
-          }
-        });
-    },
+    // async add() {
+    //   this.functionCalled = "add";
+    //   this.loading = true;
+    //   await Axios.post(apiUrl, {
+    //     link: this.link,
+    //   })
+    //     .then((event) => this.eventAlert(event.data))
+    //     .catch((err) => this.eventAlert(err.data));
+    // },
+    // async update() {
+    //   this.functionCalled = "update";
+    //   this.loading = true;
+    //   await Axios.put(apiUrl, {
+    //     link: this.link,
+    //   })
+    //     .then((event) => this.eventAlert(event.data))
+    //     .catch(function (error) {
+    //       if (error.response) {
+    //         // Request made and server responded
+    //         console.log(error.response.data);
+    //         console.log(error.response.status);
+    //       } else if (error.request) {
+    //         // The request was made but no response was received
+    //         this.eventAlert(error.request);
+    //         console.log("Error: "+error.request);
+    //       } else {
+    //         // Something happened in setting up the request that triggered an Error
+    //         console.log("Error: "+error.message);
+    //       }
+    //     });
+    // },
     eventAlert(event) {
       if (typeof event.body === "object") {
         this.isNewEvent = true;
