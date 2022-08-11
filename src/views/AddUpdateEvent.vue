@@ -42,13 +42,10 @@
 </template>
 
 <script>
-import Axios from "axios";
+// import Axios from "axios";
 import AlertNotification from "../components/AlertNotification";
 import Loading from "../components/Loading";
 
-//api link
-
-let apiUrl = "https://wqh9ckdbre.execute-api.ap-southeast-1.amazonaws.com/dev";
 
 export default {
   name: "AddUpdateEvent",
@@ -74,37 +71,37 @@ export default {
     };
   },
   methods: {
-    async add() {
-      this.functionCalled = "add";
-      this.loading = true;
-      await Axios.post(apiUrl, {
-        link: this.link,
-      })
-        .then((event) => this.eventAlert(event.data))
-        .catch((err) => this.eventAlert(err.data));
-    },
-    async update() {
-      this.functionCalled = "update";
-      this.loading = true;
-      await Axios.put(apiUrl, {
-        link: this.link,
-      })
-        .then((event) => this.eventAlert(event.data))
-        .catch(function (error) {
-          if (error.response) {
-            // Request made and server responded
-            console.log(error.response.data);
-            console.log(error.response.status);
-          } else if (error.request) {
-            // The request was made but no response was received
-            this.eventAlert(error.request);
-            console.log("Error: "+error.request);
-          } else {
-            // Something happened in setting up the request that triggered an Error
-            console.log("Error: "+error.message);
-          }
-        });
-    },
+    // async add() {
+    //   this.functionCalled = "add";
+    //   this.loading = true;
+    //   await Axios.post(apiUrl, {
+    //     link: this.link,
+    //   })
+    //     .then((event) => this.eventAlert(event.data))
+    //     .catch((err) => this.eventAlert(err.data));
+    // },
+    // async update() {
+    //   this.functionCalled = "update";
+    //   this.loading = true;
+    //   await Axios.put(apiUrl, {
+    //     link: this.link,
+    //   })
+    //     .then((event) => this.eventAlert(event.data))
+    //     .catch(function (error) {
+    //       if (error.response) {
+    //         // Request made and server responded
+    //         console.log(error.response.data);
+    //         console.log(error.response.status);
+    //       } else if (error.request) {
+    //         // The request was made but no response was received
+    //         this.eventAlert(error.request);
+    //         console.log("Error: "+error.request);
+    //       } else {
+    //         // Something happened in setting up the request that triggered an Error
+    //         console.log("Error: "+error.message);
+    //       }
+    //     });
+    // },
     eventAlert(event) {
       if (typeof event.body === "object") {
         this.isNewEvent = true;

@@ -96,12 +96,6 @@ export default {
     search: "",
   }),
   created() {
-    // await axios
-    //   .get("https://v8uk2bk42a.execute-api.ap-southeast-1.amazonaws.com/dev/")
-    //   .then((response) => (this.ConstantEvents = response.data))
-    //   .catch(() => {
-    //     this.isError = true;
-    //   });
   },
   computed: {
     isError() {
