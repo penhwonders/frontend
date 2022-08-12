@@ -7,7 +7,10 @@
 ![GitHub forks](https://img.shields.io/github/forks/penhwonders/frontend?style=social)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4825a1ca-c270-4bfb-980e-8c616ef8e123/deploy-status)](https://app.netlify.com/sites/phnompenhevents/deploys)
 
+https://phnompenhevents.netlify.app/
+
 A web application to help you easier in finding and promoting wonderful events in Phnom Penh!
+
 
 ## Prerequisites
 
