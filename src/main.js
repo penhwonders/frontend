@@ -6,15 +6,15 @@ import vuetify from './plugins/vuetify';
 import router from './router/router';
 import store from './plugins/appState';
 
-// for social sharing
-Vue.use(VueSocialSharing);
-
 // and then use it in main.js
 Vue.use(VueAnalytics, {
-  id: "UA-186949747-1",
+  id: 'UA-186949747-1',
   router,
 });
 Vue.config.productionTip = false;
+
+// for social sharing
+Vue.use(VueSocialSharing);
 
 new Vue({
   vuetify,
